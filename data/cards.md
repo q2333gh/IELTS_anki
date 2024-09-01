@@ -248,3 +248,112 @@ Alternative: elimination
 词根和词缀：源自拉丁语"abolitio"，意为"摧毁"，来自"abolere"（摧毁）。  
 定义：正式结束或停止某事的行为，通常是指一种惯例或系统。
 
+## The **abortion** was a difficult decision for her to make.
+Alternative: termination
+词根和词缀："abortion" 这个词源自拉丁语 "abortio"，来自 "aboriri"，意思是"流产"。前缀 "a-" 意为"远离"，而 "born" 与出生相关。
+定义：在胎儿能够在母亲子宫外独立生活之前，故意终止妊娠。
+
+## The **abolition** of slavery was a significant historical event.
+Alternative: end
+**abolition** 
+
+## The government decided to **abolish** outdated regulations.  
+Eliminate  
+**abolish** 这个词源自拉丁语 *abolere*，意思是"摧毁"或"结束"。它有前缀 "a-"，意思是"离开"，以及与 "throw" 或 "build" 相关的词根 "bol-"。  
+**Abolish** 的意思是正式结束或废除某事。
+
+## The **abortive** attempt to fix the car only made things worse.  
+Failed  
+词语"abortive"来自拉丁语"abortivus"，源自"abortus"，意为"流产的"或"被阻止发展的"。前缀"a-"表示"不是"，而"abortus"与"abortion"相关，后者指的是被中断或失败的事物。  
+**Abortive** 意味着未能产生预期结果；不成功。
+
+## The government decided to **abrogate** the outdated law.  
+Cancel  
+根词是拉丁语"abrogare"，由"ab-"（离开）和"rogare"（询问）组成，意为废除或取消。正式废除或撤销一项法律或协议。
+
+## She decided to **abridge** the novel to fit it into the magazine.  
+Shorten  
+词根是"bridge"，前缀"a-"意味着"到"或"朝向"，表示减少或缩短。  
+缩短或浓缩某物，特别是文本，方法是移除部分内容。
+
+## The **abortion** procedure was performed early in the pregnancy.  
+Termination  
+"abortion"这个词源于拉丁语"abortus"，意为"流产"。它由"ab-"（远离）和"oriri"（升起）组成。  
+流产指的是医学或外科手术终止妊娠。
+
+## He decided to **abridge** the book for the class project.  
+Shorten  
+"abridge"这个词来源于拉丁语"abridged"，它结合了"ab-"（远离）和"regere"（引导或统治），意思是减少或缩短。  
+在保持其基本意义的同时，使某物变得更短。
+
+## The government decided to **abolish** the outdated law.  
+Eliminate  
+"abolish"这个词来源于拉丁语"abolere"，意为摧毁或消除。它结合了"a-"（从）和"bolere"（投掷），暗示完全去除某物的动作。  
+正式结束或废除某事。
+
+## The government decided on the **abolition** of the outdated law.  
+Synonym: termination  
+词汇**abolition**来自拉丁词汇*abolitio*，意为"废除行为"，源自*abolere*，意为"摧毁"或"终止"。  
+Abolition意味着正式结束或停止某事，尤其是法律、制度或做法。
+
+## The **abortive** attempt to fix the computer was unsuccessful.  
+Unsuccessful  
+"abortive"这个词来源于拉丁语"abortivus"，该词源于"abortus"，意为"流产"或"失败"，加上后缀"-ive"，形成表示倾向或特质的形容词。  
+**Abortive**意为未能产生预期结果或不成功。
+
+## The government decided to **abrogate** the outdated law.  
+Replace  
+"abrogate"这个词源自拉丁语"abrogare"，意为"废除"或"撤销"。它由"ab-"（远离）和"rogare"（询问或提议）组成，因此意味着正式拒绝或废除先前的决定或法律。  
+正式废除或废除某物，特别是法律或法规。
+
+
+
+
+
+## She showed **admiration** for his artistic talent.  
+Alternative: respect  
+词根：源自拉丁语"admiratio"，结合了"ad-"（向）和"mirari"（惊奇）。  
+定义：一种深深的尊重和赞许的感觉。
+
+## She **admittedly** forgot to send the email.
+equivalent word: "confessed"
+根词和词缀："Admittedly" 来自 "admit"，其来源于拉丁语 "admittere"，意为"允许进入"。后缀"-ly" 被加到 "admit" 上形成副词。
+定义：Admittedly 意味着承认或接受某事为真，通常是勉强地。
+
+## The **administrative** team handles office operations.
+Management
+词根是"administer"，源自拉丁语"administrare"，意为"管理"。后缀"-ive"表示功能或倾向。
+**Administrative** 相关于涉及管理或组织活动和操作的任务。
+
+## I **admire** her dedication to her work.  
+Respect  
+**admire**的词根是拉丁语"admirari"，意思是"惊奇"，来自"ad-"（到）和"mirari"（惊奇）。  
+以尊重和赞同的态度看待。
+
+## He made an **adjustment** to the schedule to fit everyone’s needs.  
+Modification  
+"调整"一词源于拉丁语词根"adjustare"，意思是"使之有序"——"ad"（到）+"justare"（使公平）。  
+调整意味着为改善或适应某事而做出的小改变或修正。
+
+## The **adolescence** of the child was marked by rapid changes and growth.  
+Teenage years  
+"adolescence" 这个词来源于拉丁语 "adolescere"，意为 "成长"。它结合了 "ad-"（朝向）和 "olescere"（成长）。  
+青少年期指的是从童年到成年的过渡时期，通常是13岁到19岁。
+
+## The manager will **administer** the new project starting next week.
+manage
+"administer" 的词根来源于拉丁语 "administrare"，该词由 "ad-"（到）和 "ministrare"（服务）组合而成。**Administer** 的意思是管理或负责某事。
+
+## The **administration** of the company involves managing daily operations.  
+Management  
+词语 **administration** 源自拉丁语 "administratio"，其中 "ad-" 意为 "向" 和 "ministrare" 意为 "服务或管理"。它指的是管理和组织活动或操作的过程。
+
+## She had to **admit** she made a mistake.  
+confess  
+"admit"这个词源自拉丁语"admittere"，意为"送往"或"允许进入"。它由"ad-"（到）和"mittere"（发送）组成。  
+**Admit** 意为承认或认可某事，通常带有不情愿的意味。
+
+## She was thrilled to receive **admission** to the university.
+Entry
+"ad
+

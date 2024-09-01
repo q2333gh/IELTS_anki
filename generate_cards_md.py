@@ -2,6 +2,9 @@ from openai import OpenAI
 import httpx
 import os
 import sys
+import threading
+
+file_lock = threading.Lock()
 
 
 class LLM_Client:
@@ -85,8 +88,9 @@ The requirements are as follows:
 def write_to_card_file(content):
     os.makedirs("data", exist_ok=True)
     try:
-        with open("data/cards.md", "a") as file:
-            file.write(content)
+        with file_lock:  # Acquire the lock before writing
+            with open("data/cards.md", "a") as file:
+                file.write(content)
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
         sys.exit(1)
@@ -137,17 +141,22 @@ def read_words_from_file():
 
 
 def main():
+    import concurrent.futures
+
     words = read_words_from_file()
     # Select words from index 8 to 11 (inclusive)
-    selected_words = words[8:10]
+    selected_words = words[81:91]
     words = selected_words
     llm_client = LLM_Client()
-    for word in words:
+
+    def process_word(word):
         card_eng = generate_card(llm_client, word)
         front, back_eng = split_a_card(card_eng)
         card_chn = front + translate_to_chinese(llm_client, back_eng)
-        # print(card_chn)
         write_to_card_file(card_chn)
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        executor.map(process_word, words)
 
 
 if __name__ == "__main__":
