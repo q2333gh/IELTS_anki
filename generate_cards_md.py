@@ -3,14 +3,18 @@ import httpx
 import os
 import sys
 
-class OpenAIClient:
+
+class LLM_Client:
     def __init__(self):
         self.client = self._create_openai_client()
 
     def _get_api_token(self):
         api_token = os.environ.get("LLM_API_KEY")
         if api_token is None:
-            print("Error: shell env key not found: LLM_API_KEY is not set.", file=sys.stderr)
+            print(
+                "Error: shell env key not found: LLM_API_KEY is not set.",
+                file=sys.stderr,
+            )
             sys.exit(1)  # Exit the program with a non-zero status
         return api_token
 
@@ -39,6 +43,7 @@ class OpenAIClient:
             print(f"Error generating completion: {e}", file=sys.stderr)
             sys.exit(1)
 
+
 def read_words_from_file(filename):
     try:
         with open(filename, "r") as file:
@@ -57,8 +62,9 @@ def read_words_from_file(filename):
         print(f"Unexpected error reading file '{filename}': {e}", file=sys.stderr)
         sys.exit(1)
 
+
 def generate_prompt(input_text):
-# The answer should be derived from the English corpus to solve the problem and translated into Chinese:
+    # The answer should be derived from the English corpus to solve the problem and translated into Chinese:
     return f"""
 I am a native Chinese speaker and need to learn English a word: {input_text}
 The requirements are as follows:
@@ -68,6 +74,7 @@ The requirements are as follows:
   02. Briefly and comprehensively explain the root and affixes, and the origin of the word in English.
   03. Brief and accurate definition.  
 """
+
 
 '''
 prompt_cn=f"""
@@ -93,10 +100,11 @@ The requirements are as follows:
 """
 '''
 
+
 def write_to_file(content):
-    os.makedirs('data', exist_ok=True)
+    os.makedirs("data", exist_ok=True)
     try:
-        with open('data/cards.md', 'a') as file:
+        with open("data/cards.md", "a") as file:
             file.write(content)
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
@@ -108,10 +116,12 @@ def write_to_file(content):
         print(f"Unexpected error writing to file: {e}", file=sys.stderr)
         sys.exit(1)
 
+
 def generate_card(openai_client, input_text):
     prompt = generate_prompt(input_text)
     eng_res = openai_client.get_completion(prompt)
     return eng_res
+
 
 def translate_to_chinese(openai_client, text):
     translate_prompt = (
@@ -120,18 +130,20 @@ def translate_to_chinese(openai_client, text):
     )
     return openai_client.get_completion(translate_prompt)
 
+
 def main():
     input_text = "chronic"
 
-    openai_client = OpenAIClient()
+    llm_client = LLM_Client()
 
-    card_eng = generate_card(openai_client, input_text)
+    card_eng = generate_card(llm_client, input_text)
     print(card_eng)
 
-    card_chn = translate_to_chinese(openai_client, card_eng)
+    card_chn = translate_to_chinese(llm_client, card_eng)
     print(card_chn)
 
     write_to_file(card_chn)
+
 
 if __name__ == "__main__":
     main()
