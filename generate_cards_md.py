@@ -7,8 +7,8 @@ import sys
 class LLM_Client:
     # available models:
     # gpt-3.5-turbo, gpt-4o
-    model = "gpt-3.5-turbo" # 25K times
     # model = "gpt-4o"  1000 times of 150q 60a for 10usd .
+    model = "gpt-3.5-turbo"  # 25K times
 
     def __init__(self):
         self.client = self._create_llm_client()
@@ -81,7 +81,7 @@ The requirements are as follows:
 """
 
 
-def write_to_file(content):
+def write_to_card_file(content):
     os.makedirs("data", exist_ok=True)
     try:
         with open("data/cards.md", "a") as file:
@@ -134,7 +134,7 @@ def main():
     front, back_eng = split_a_card(card_eng)
     card_chn = front + translate_to_chinese(llm_client, back_eng)
     # print(card_chn)
-    write_to_file(card_chn)
+    write_to_card_file(card_chn)
 
 
 if __name__ == "__main__":

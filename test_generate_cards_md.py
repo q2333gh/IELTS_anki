@@ -6,8 +6,10 @@ from generate_cards_md import (
     read_words_from_file,
     generate_prompt,
     split_a_card,
-    write_to_file,
+    write_to_card_file,
 )
+
+
 # python3 -m unittest test_generate_cards_md.py
 class TestChnCharIntoEngChar(unittest.TestCase):
     def test_chn_char_into_eng_char(self):
@@ -67,7 +69,7 @@ class TestWriteToFile(unittest.TestCase):
     @patch("builtins.open", new_callable=mock_open)
     def test_write_to_file(self, mock_file, mock_makedirs):
         content = "Test content"
-        write_to_file(content)
+        write_to_card_file(content)
         mock_makedirs.assert_called_once_with("data", exist_ok=True)
         mock_file.assert_called_once_with("data/cards.md", "a")
         mock_file().write.assert_called_once_with(content)
