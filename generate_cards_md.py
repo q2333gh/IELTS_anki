@@ -95,10 +95,6 @@ def generate_card(openai_client, input_text):
     return eng_res
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 def translate_to_chinese(openai_client, src_text):
     translate_prompt = (
         "translate the following text into Chinese , your answer  dont modify any symbols"
@@ -138,9 +134,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-
 import unittest
-
 
 #  py3 -m unittest generate_cards_md.TestChnCharIntoEngChar
 class TestChnCharIntoEngChar(unittest.TestCase):
