@@ -9,11 +9,13 @@ import multiprocessing
 
 file_lock = threading.Lock()
 
+
 class Back:
     def __init__(self, alternative_words, src_explain, word_def):
         self.alternative_words = alternative_words
         self.src_explain = src_explain
         self.word_def = word_def
+
 
 class LearnCard:
     def __init__(self, front, alternative_words, src_explain, word_def):
@@ -22,6 +24,7 @@ class LearnCard:
 
     def __str__(self):
         return f"{self.front}\n{self.back.alternative_words}\n{self.back.src_explain}\n{self.back.word_def}\n"
+
 
 class LLM_Client:
     # available models:
@@ -62,10 +65,11 @@ class LLM_Client:
                     {"role": "user", "content": prompt},
                 ],
             )
-            return completion.choices[0].message.content + "\n\n"
+            return completion.choices[0].message.content
         except Exception as e:
             print(f"Error generating completion: {e}", file=sys.stderr)
             sys.exit(1)
+
 
 def read_words_from_file(filename):
     try:
@@ -85,6 +89,7 @@ def read_words_from_file(filename):
         print(f"Unexpected error reading file '{filename}': {e}", file=sys.stderr)
         sys.exit(1)
 
+
 def gen_card_prompt(input_text):
     return f"""
 I need to learn English a word: {input_text}
@@ -102,8 +107,8 @@ def write_to_card_file(content):
     os.makedirs("data", exist_ok=True)
     try:
         with file_lock:
-            with open("data/cards02.md", "a") as file:
-                file.write(str(content))
+            with open("data/cards03.md", "a") as file:
+                file.write(content)
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
         sys.exit(1)
@@ -121,7 +126,7 @@ def gen_card_eng(llm_client, input_text):
 
 def trans_to_chn(llm_client, src_text):
     translate_prompt = (
-        "translate the following text into Chinese , your answer  dont modify any symbols"
+        "translate the following text into Chinese:"
         + src_text
     )
     ret = llm_client.ask(translate_prompt)
@@ -132,13 +137,15 @@ def trans_to_chn(llm_client, src_text):
 def chn_char_into_eng_char(text):
     return text.replace("“", '"').replace("”", '"')
 
+
 def parse_card_content(content):
-    lines = [line.strip() for line in content.split('\n') if line.strip()]
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
     front = lines[0]
     alternative_words = lines[1]
     src_explain = lines[2]
     word_def = lines[3]
     return LearnCard(front, alternative_words, src_explain, word_def)
+
 
 def google_translate(text, target_language="zh-CN"):
     """
@@ -169,9 +176,10 @@ def google_translate(text, target_language="zh-CN"):
         print(f"Error occurred while translating: {e}")
         exit(1)
 
+
 def main():
     words = read_words_from_file("data/filtered_words.txt")
-    selected_words = words[2003:2008]
+    selected_words = words[2003:2005]
     words = selected_words
     llm_client = LLM_Client()
 
@@ -182,13 +190,10 @@ def main():
         word_def_chn = trans_to_chn(llm_client, card.back.word_def)
         card.back.src_explain += f"\n{src_explain_chn}"
         card.back.word_def += f"\n{word_def_chn}"
-        write_to_card_file(card)
+        write_to_card_file(card+"\n")
 
     max_workers = multiprocessing.cpu_count()
-
-    with concurrent.futures.ThreadPoolExecutor(
-        max_workers=max_workers
-    ) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         executor.map(process_word, words)
 
 if __name__ == "__main__":

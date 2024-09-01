@@ -13,3 +13,8 @@ sudo python3.12 get-pip.py this use curl https://bootstrap.pypa.io/get-pip.py -o
 sudo python3.12 -m pip install --upgrade pip setuptools && sudo python3.12 -m pip install openai httpx
 
 mdanki cards.md cards.apkg
+
+
+
+# debug yourself: (i use fish shell)
+python3 -m venv myenv && source myenv/bin/activate.fish && pip install -r requirements.txt
