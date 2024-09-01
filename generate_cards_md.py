@@ -178,14 +178,14 @@ def main():
     import multiprocessing
 
     words = read_words_from_file()  # about 4000 words.
-    selected_words = words[2000:2003]
+    selected_words = words[2003:2008]
     words = selected_words
     llm_client = LLM_Client()
 
     def process_word(word):
         card_eng = generate_card(llm_client, word)
         front, back_eng = split_a_card(card_eng)
-        card_chn = front + translate_to_chinese(llm_client, back_eng)
+        card_chn = front + translate_to_chinese(llm_client, back_eng) + back_eng
         write_to_card_file(card_chn + "\n")
 
     max_workers = multiprocessing.cpu_count()
