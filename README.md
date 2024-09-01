@@ -1,6 +1,7 @@
 Thanks to
 
 1. words list src: https://github.com/lzrk/nglsh/blob/master/IELTS-4000.txt
+https://github.com/fanhongtao/IELTS/blob/master/IELTS%20Word%20List.txt
 
 2. convert .md file to anki cards import format: https://github.com/ashlinchak/mdanki?tab=readme-ov-file#cards
 

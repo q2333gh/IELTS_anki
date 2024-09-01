@@ -19,3 +19,24 @@ turbo3.5-0125
 
 gpt4o
 0.011460
+
+
+turbo3.5-0125 : 100 cards
+4.999-4.959
+
+0.04/100
+0.0004 each card
+5/0.0004 
+
+
+TODO maybe try json:
+
+{
+  "input_text": "{input_text}",
+  "response": {
+    "sentence": "## {sentence with the word wrapped in ** **}",
+    "alternatives": "{alternative1}, {alternative2}",
+    "root_words_and_affixes": "{brief and comprehensively explanation of root words and affixes}",
+    "definition": "{brief and accurate definition}"
+  }
+}

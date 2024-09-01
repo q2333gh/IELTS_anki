@@ -6,6 +6,7 @@ import threading
 import requests
 import concurrent.futures
 import multiprocessing
+import uuid
 
 file_lock = threading.Lock()
 
@@ -37,7 +38,7 @@ class LLM_Client:
         self.client = self._create_llm_client()
 
     def _get_api_token(self):
-        # api_token = os.environ.get("LLM_API_KEY")
+        # api_token = os.environ.get("LLM_API_KEY") #/home/btwl/.config/fish/config.fish
         api_token = os.environ.get("LLM_API_KEY2") # 3.5 only key.
         if api_token is None:
             print(
@@ -61,10 +62,13 @@ class LLM_Client:
     # default use gpt3.5turbo, if you want to use gpt4o, set model="gpt-4o"
     def ask(self, prompt, model=model):
         try:
+            conversation_id = str(
+                uuid.uuid4()
+            )  # Generate a unique identifier for each conversation
             completion = self.client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "user", "content": prompt},
+                    {"role": "user", "content": prompt, "conversation_id":    conversation_id},
                 ],
             )
             return completion.choices[0].message.content
@@ -91,17 +95,16 @@ def read_words_from_file(filename):
         print(f"Unexpected error reading file '{filename}': {e}", file=sys.stderr)
         sys.exit(1)
 
-
+# key prompt:  `meaningful` !
 def gen_card_prompt(input_text):
     return f"""
-I need to learn English a word: {input_text}
+I am learning an English word: {input_text}
 Requirements are as follows:
-1. Please answer in plain text format, do not use Markdown.
-2. The answer should only include the following content:
-  01. Start with 2 #, followed by a space, use appropriate and brief wording to make a sentence, the word must wrapped in ** **, newline
-  02. give 2 most equivalent and common used english word alternative, newline
-  03. Briefly and comprehensively explain the target word root words and affixes, newline
-  04. Brief and accurate definition, newline
+  The answer should only include the following content:
+  make a sentence which is precise,comprehensive,conciseness,vivid,meaningful;only  the target word should wrapped in ** **, newline
+  give 2 most equivalent and common used english word alternative, newline
+  Briefly and comprehensively explain the target word root words and affixes, newline
+  Brief and accurate definition, newline
 """
 
 
@@ -113,7 +116,7 @@ def write_to_card_file(content):
     try:
         with file_lock:
             # with statement ensures that the lock is properly acquired and released
-            with open("data/cards02.md", "a") as file:
+            with open("data/cards_might_good.md", "a") as file:
                 file.write(content)
     except Exception as e:
         print(f"An error occurred by write_to_card_file(): {e}")
@@ -139,9 +142,9 @@ def chn_char_into_eng_char(text):
 
 def parse_card_content(content):
     lines = [line.strip() for line in content.split("\n") if line.strip()]
-    front = lines[0]
-    alternative_words = lines[1]
-    src_explain = lines[2]
+    front = "## " + str(lines[0])
+    alternative_words = str(lines[1])
+    src_explain = str(lines[2])
     word_def = lines[3]
     return LearnCard(front, alternative_words, src_explain, word_def)
 
@@ -189,9 +192,10 @@ def process_word(word, llm_client):
 
 
 def main():
-    words = read_words_from_file("data/filtered_words.txt")
-    selected_words = words[3010:3011]
-    words = selected_words
+    words = read_words_from_file("data/words4000.txt")
+    # selected_words = words[3000:3010]
+    # words = selected_words
+    # # words = ["deficit"]
     llm_client = LLM_Client()
 
     max_workers = multiprocessing.cpu_count()
