@@ -4,7 +4,7 @@ from unittest.mock import patch, mock_open
 from generate_cards_md import (
     chn_char_into_eng_char,
     read_words_from_file,
-    generate_prompt,
+    gen_card_prompt,
     split_a_card,
     write_to_card_file,
 )
@@ -51,7 +51,7 @@ class TestReadWordsFromFile(unittest.TestCase):
 class TestGeneratePrompt(unittest.TestCase):
     def test_generate_prompt(self):
         input_text = "test"
-        prompt = generate_prompt(input_text)
+        prompt = gen_card_prompt(input_text)
         self.assertIn(input_text, prompt)
         self.assertIn("I am a native Chinese speaker", prompt)
 

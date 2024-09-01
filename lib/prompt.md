@@ -35,3 +35,13 @@ The requirements are as follows:
 ```
 
 
+
+
+I am a native Chinese speaker and need to learn English a word: abortion
+The requirements are as follows:
+1. Please answer in plain text format, do not use Markdown.
+2. The answer should only include the following content:
+  01. Start with 2 #, followed by a space, and use appropriate and brief wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
+  02. give most equivalent and common used english word alternative
+  03. Briefly and comprehensively explain the target word root words and affixes.
+  04. Brief and accurate definition. 

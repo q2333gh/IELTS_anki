@@ -155,3 +155,96 @@ Definition: **Chronic** means persisting for a long time or constantly recurring
 
 **Chronic** 指的是持续很长时间的事物，通常指的是长期存在且反复出现的疾病或状况。
 
+## The government decided to **abolish** outdated laws.  
+"abolish"这个词来源于拉丁语"abolere"，意为"摧毁"或"结束"。它由前缀"a-"（意为"远离"）和词根"bol"（与"扔"或"放置"相关）构成。
+
+定义：正式结束或废除某事，尤其是法律或系统。
+
+## The **abolition** of slavery was a significant historical event.
+"abolition" 这个词来源于拉丁语 "abolitio"，意思是 "摧毁的行为"。它结合了 "ab-"（离开）和 "olere"（使消失）。在英语中，它表示正式结束或根除某种实践或机构的行为。
+
+定义：正式结束或消除一个系统、实践或机构的行为。
+
+## Many people have strong opinions about **abortion**.
+**abortion** 这个词来源于拉丁语 *abortio*，意为"流产"或"未能继续"。它源自 *ab-*，意为"远离"，以及 *ortus*，意为"上升"或"出生"。在英语中，这个术语指的是结束妊娠的医疗程序。
+
+定义：**Abortion** 是指故意终止妊娠。
+
+## The project was considered **abortive** after it failed to meet its goals.  
+"abortive" 这个词来源于拉丁语 "abortivus"，它源自 "abortus"，意思是"流产"或"失败"，加上后缀 "-ive"，表示形容词。
+
+定义：未能实现预期结果。
+
+## The government voted to **abolish** outdated laws.
+"abolish"这个词来源于拉丁词"abolere"，意思是摧毁或结束。它没有任何改变其核心意义的前缀或后缀。
+
+"abolish"的意思是正式结束一个系统、实践或机构。
+
+## The **abolition** of slavery was a significant moment in history.
+"abolition"这个词源于拉丁语"abolitio"，它来源于"abolere"，意为"摧毁"或"废除"。后缀"-ion"表示废除某事的动作或过程。
+
+正式结束或停止某事的行为，特别是指废除奴隶制。
+
+## **abortion** is a medical procedure that ends a pregnancy.
+"abortion" 这个词来源于拉丁词"abortus"，它源于"abori"，意为"流产"或"消失"。前缀"ab-"意味着"远离"或"从"，而根词"oriri"与升起或开始有关。
+
+它被定义为在胎儿能够在子宫外生存之前终止妊娠。
+
+## The mission was **abortive** due to unexpected weather conditions.
+词语"abortive"源自拉丁语"abortivus"，该词源于"aboriri"，意为"流产"或"去世"。前缀"a-"表示"远离"，而词根"bort"与出生或开始有关。
+
+它的意思是未能实现预期的目标或不成功。
+
+## The government decided to **abolish** outdated laws.  
+**abolish** 这个词来自拉丁语 "abolere"，意思是 "毁灭" 或 "终结"。它将前缀 "a-"（远离）与 "bolere"（抛弃）结合在一起。  
+定义：正式结束或废除某事，特别是法律、习俗或制度。
+
+## The **abolition** of slavery was a significant historical event.
+"abolition" 这个词源自拉丁语"abolitio"，其来源于"abolere"，意为"摧毁"或"使消失"。前缀"a-"表示"远离"，而词根"bolere"与"摧毁"有关。
+
+定义：正式结束或停止某事的行为，特别是法律、制度或实践。
+
+## The **abortion** debate is a complex and emotional issue.
+最等效且常用的替代英语词是"termination"。
+
+"abortion"一词来源于拉丁语根"abortio"，意为"早产"或"流产"。它由"ab-"构成，意为"远离"，以及"oriri"，意为"升起"或"出生"。
+
+流产是指在胎儿能够在子宫外独立生存之前，医学上或故意结束怀孕的过程。
+
+## The **abortive** attempt ended in failure.  
+等效词：失败的  
+词根和词缀："Abortive"源自拉丁语"abortivus"，意为"流产的"或"失败的"，源自"abortus"（流产）和后缀"-ive"，用于构成形容词。  
+定义：**Abortive**指未能产生预期结果或失败的。
+
+## The government decided to **abolish** outdated laws.  
+Equivalent word: eliminate  
+根词和词缀："Abolish" 源自拉丁语 "abolere"，意思是"摧毁"。  
+定义：正式结束或废除某事。
+
+## The **abolition** of slavery was a significant historical event.
+
+替代: end
+
+词根和词缀: "abolition" 这个词源自拉丁语 "abolitio"，意思是 "摧毁或消除"，来自 "abolere"，意为 "废除"。后缀 "-tion" 将动词转变为名词。
+
+定义: 正式结束或消除某事，特别是法律、系统或惯例的行为。
+
+## The government decided to **abolish** the outdated law.
+Alternative: eliminate
+"abolish"这个词源自拉丁语"abolere"，意思是"摧毁"或"废除"。它将"a-"（"ab-"的变体，意为"远离"）与"olere"（意为"使生长"）结合在一起。后缀"-ish"则增加了使某事发生的感觉。定义：正式结束或废除某事，通常是系统、实践或机构。
+
+## The **abolition** of slavery was a significant historical event. 
+Equivalent word: ending
+词根和词缀："Abolition" 来源于拉丁词 "abolitio"，意思是 "废除"。前缀 "ab-" 意为 "远离"，而 "-tion" 是一个名词后缀，表示某种行为或过程。
+定义：正式结束或摧毁某物的行为，尤其是系统、实践或机构。
+
+## The government decided to **abolish** the outdated law.  
+Eliminate  
+"abolish"一词源自拉丁语"abolere"，意为"摧毁"或"终结"。它将前缀"ab-"（离开）与"olere"（摧毁）结合在一起。  
+正式终结或消除某物，通常是法律或实践。
+
+## The **abolition** of slavery was a major milestone in history.
+Alternative: elimination
+词根和词缀：源自拉丁语"abolitio"，意为"摧毁"，来自"abolere"（摧毁）。  
+定义：正式结束或停止某事的行为，通常是指一种惯例或系统。
+
