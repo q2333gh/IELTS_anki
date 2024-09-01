@@ -122,28 +122,35 @@ def generate_card(openai_client, input_text):
     eng_res = openai_client.get_completion(prompt)
     return eng_res
 
+def chn_char_into_eng_char(text):
+    return text.replace(""", '"').replace(""", '"')
 
-def translate_to_chinese(openai_client, text):
+def translate_to_chinese(openai_client, src_text):
     translate_prompt = (
-        "translate the following text into Chinese: all symbols should using English characters"
-        + text
+        "translate the following text into Chinese , dont modify any symbols"
+        + src_text
     )
-    return openai_client.get_completion(translate_prompt)
+    ret = openai_client.get_completion(translate_prompt)
+    return chn_char_into_eng_char(ret)
 
+
+def split_a_card(src_text):
+    lines = src_text.split('\n')
+    part1 = [line for line in lines if line.startswith("##")]
+    part2 = [line for line in lines if not line.startswith("##")]
+    part1_text = '\n'.join(part1)+'\n'
+    part2_text = '\n'.join(part2)
+    return part1_text, part2_text
 
 def main():
     input_text = "chronic"
-
     llm_client = LLM_Client()
-
     card_eng = generate_card(llm_client, input_text)
     print(card_eng)
-
-    card_chn = translate_to_chinese(llm_client, card_eng)
+    front, back_eng = split_a_card(card_eng)
+    card_chn = front + translate_to_chinese(llm_client, back_eng)
     print(card_chn)
-
     write_to_file(card_chn)
-
 
 if __name__ == "__main__":
     main()
