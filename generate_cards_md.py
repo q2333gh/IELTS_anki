@@ -74,14 +74,14 @@ def read_words_from_file(filename):
 def gen_card_prompt(input_text):
     # The answer should be derived from the English corpus to solve the problem and translated into Chinese:
     return f"""
-I am a native Chinese speaker and need to learn English a word: {input_text}
-The requirements are as follows:
+I need to learn English a word: {input_text}
+Requirements are as follows:
 1. Please answer in plain text format, do not use Markdown.
 2. The answer should only include the following content:
-  01. Start with 2 #, followed by a space, and use appropriate and brief wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
-  02. give most equivalent and common used english word alternative, then start a new line.
-  03. Briefly and comprehensively explain the target word root words and affixes, then start a new line.
-  04. Brief and accurate definition, then start a new line.
+  01. Start with 2 #, followed by a space, use appropriate and brief wording to make a sentence, the word must wrapped in ** **, newline
+  02. give 2 most equivalent and common used english word alternative, newline
+  03. Briefly and comprehensively explain the target word root words and affixes, newline
+  04. Brief and accurate definition, newline
 """
 
 
@@ -89,7 +89,7 @@ def write_to_card_file(content):
     os.makedirs("data", exist_ok=True)
     try:
         with file_lock:  # Acquire the lock before writing
-            with open("data/cards.md", "a") as file:
+            with open("data/cards02.md", "a") as file:
                 file.write(content)
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
@@ -145,7 +145,7 @@ def main():
     import multiprocessing
 
     words = read_words_from_file()  # about 4000 words.
-    selected_words = words[1181:1291]
+    selected_words = words[2000:2003]
     words = selected_words
     llm_client = LLM_Client()
 
@@ -153,12 +153,48 @@ def main():
         card_eng = generate_card(llm_client, word)
         front, back_eng = split_a_card(card_eng)
         card_chn = front + translate_to_chinese(llm_client, back_eng)
-        write_to_card_file(card_chn)
+        write_to_card_file(card_chn + "\n")
 
     max_workers = multiprocessing.cpu_count()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=max_workers
+    ) as executor:
         executor.map(process_word, words)
+
+
+import requests
+
+
+def google_translate(text, target_language="zh-CN"):
+    """
+    Translate text using Google Translate API (free method).
+
+    :param text: The text to translate
+    :param target_language: The target language code (default is 'zh-CN' for Chinese)
+    :return: Translated text
+    """
+    base_url = "https://translate.googleapis.com/translate_a/single"
+    params = {
+        "client": "gtx",
+        "sl": "auto",
+        "tl": target_language,
+        "dt": "t",
+        "q": text,
+    }
+
+    try:
+        response = requests.get(base_url, params=params)
+        response.raise_for_status()
+        result = response.json()
+        translated_text = "".join(
+            [sentence[0] for sentence in result[0] if sentence[0]]
+        )
+        return translated_text
+    except requests.RequestException as e:
+        print(f"Error occurred while translating: {e}")
+        exit(1)
+        return text  # Return original text if translation fails
 
 
 if __name__ == "__main__":

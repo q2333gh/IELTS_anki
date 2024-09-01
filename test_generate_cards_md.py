@@ -7,6 +7,7 @@ from generate_cards_md import (
     gen_card_prompt,
     split_a_card,
     write_to_card_file,
+    google_translate,
 )
 
 
@@ -73,3 +74,32 @@ class TestWriteToFile(unittest.TestCase):
         mock_makedirs.assert_called_once_with("data", exist_ok=True)
         mock_file.assert_called_once_with("data/cards.md", "a")
         mock_file().write.assert_called_once_with(content)
+
+
+# run 100 times card gen eng, then chn.
+# 9.504998 to 9.39 -> 0.11
+# 1 card: 0.11/100 = 0.0011
+# 5k cards: 0.0011 * 5000 = 5.5
+
+
+
+class TestGoogleTranslate(unittest.TestCase):
+    def test_google_translate_success(self):
+        result = google_translate("Hello, world!", "zh-CN")
+        self.assertEqual(result, "你好，世界！")
+
+    def test_google_translate_request_exception(self):
+        # Test with a very long text that might cause an error
+        long_text = "Hello, world! " * 1000
+        result = google_translate(long_text, "zh-CN")
+        self.assertEqual(result, long_text)  # Should return original text on error
+
+    def test_google_translate_empty_response(self):
+        # Test with an empty string
+        result = google_translate("", "zh-CN")
+        self.assertEqual(result, "")  # Should return empty string for empty input
+
+    def test_google_translate_default_language(self):
+        result = google_translate("Hello, world!")  # No language specified
+        self.assertIsNotNone(result)  # We can't predict the exact translation, but it should not be None
+        self.assertNotEqual(result, "Hello, world!")  # It should be translated
