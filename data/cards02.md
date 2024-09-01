@@ -364,3 +364,395 @@ The word **humid** comes from the Latin root "humidus," meaning "moist" or "damp
 
 
 
+## **Humid** refers to an environment that is **damp** and **moist**.
+Damp, moist
+The root word is "humid" from Latin "humidus," meaning "moist or wet." There are no affixes in the English word itself.
+词根是"humid"，来自拉丁语"humidus"，意思是"潮湿的"或"湿润的"。英语单词本身没有任何词缀。
+**Humid** describes an atmosphere with high levels of moisture or water vapor.
+**潮湿** 描述了一个具有高水平湿气或水蒸气的环境。
+
+## The weather is very **humid** today.
+Synonyms: damp, moist
+The word **humid** comes from the Latin word "humidus," which means "wet" or "moist." It is made up of the root word "hum-" (related to moisture or wetness) and the suffix "-id," which often forms adjectives.
+**Humid** 这个词来源于拉丁语"humidus"，意思是"潮湿的"或"湿润的"。它由词根"hum-"（与湿气或湿润有关）和后缀"-id"组成，后缀"-id"通常用于构成形容词。
+**Humid** means having a high level of moisture in the air.
+"**Humid**" 意思是空气中含有较高水平的湿气。
+
+
+
+
+
+
+
+
+
+
+## **Preference** means a greater liking for one option over another.
+Alternatives: choice, inclination
+Root words: The word "preference" comes from Latin "praeferre," meaning "to carry before" or "to prefer." It combines "prae" (before) and "ferre" (to carry).
+词根：词汇"preference"源自拉丁语"praeferre"，意为"在前面携带"或"偏爱"。它结合了"prae"（在前）和"ferre"（携带）。
+Definition: **Preference** is the act of choosing or favoring one thing over others based on personal likes or dislikes.
+定义：**偏好**是基于个人的喜好或厌恶，选择或偏爱某一事物而非其他事物的行为。
+
+## The term **pregnant** describes someone who is carrying a developing baby in their womb.
+Expecting, Gestating
+The root word is "pregn-" from Latin "praegnas," meaning "with child" or "pregnant." The suffix "-ant" forms an adjective indicating a state or condition.
+词根是拉丁语"praegnas"的"pregn-"，意为"怀孕"或"怀有孩子"。后缀"-ant"形成形容词，表示状态或条件。
+**Pregnant** means having a baby or offspring developing inside the womb.
+"孕妇"是指子宫内有婴儿或后代正在发育的状态。
+
+## The **prediction** was based on careful analysis of the data.
+Alternatives: forecast, estimate
+Root words and affixes: The word **prediction** comes from the Latin word "praedictio," which is formed from "prae-" meaning "before" and "dictio" meaning "saying" or "speech." The prefix "pre-" means "before," and the root "dict" comes from "dicere," meaning "to say."
+词根和词缀：**预测**这个词源于拉丁语"praedictio"，由"prae-"和"dictio"组成，其中"prae-"意为"之前"，而"dictio"意为"说"或"演讲"。前缀"pre-"意为"之前"，而词根"dict"源于"dicere"，意为"说"。
+Definition: A **prediction** is a statement about what will happen in the future based on current evidence or reasoning.
+定义：**预测**是基于当前证据或推理对未来将发生的事情做出的陈述。
+
+## The **preface** of the book provides context for the main content.
+Introduction, Prologue
+The word "preface" comes from the Latin "praefatio," meaning "a saying before." It combines "prae-" (before) and "fari" (to speak).
+"前言"这个词来源于拉丁语"praefatio"，意思是"之前的话"。它结合了"prae-"（之前）和"fari"（说）。
+A **preface** is an introductory statement or section in a book or speech that explains its purpose or background.
+**前言** 是一本书或演讲中的介绍性陈述或部分，用于解释其目的或背景。
+
+## The hotel with a sea view is **preferable** to the one in the city center.
+Better, more desirable
+The word **preferable** comes from the verb "prefer," which means to like one thing more than another. The suffix "-able" is added to "prefer" to form an adjective meaning "more worthy of preference."
+"preferable" 这个词来源于动词"prefer"，意思是比另一样东西更喜欢。后缀"-able"被加到"prefer"上，形成了一个形容词，意思是"更值得偏爱"。
+Definition: More desirable or suitable than something else.
+定义：比其他东西更令人向往或更合适。
+
+## The term **pregnancy** refers to the condition of carrying a developing embryo or fetus within the uterus.
+The two most common alternatives are "gestation" and "expecting."
+The word **pregnancy** comes from the Latin root "prae-" meaning "before" and "gnasci" meaning "to be born." The suffix "-cy" denotes a state or condition.
+**怀孕**这个词源于拉丁语根词"prae-"，意为"在…之前"，以及"gnasci"，意为"出生"。后缀"-cy"表示一种状态或条件。
+**Pregnancy** is the state of carrying a developing embryo or fetus in the uterus from conception until birth.
+**怀孕**是指从受孕到分娩期间，子宫内携带一个正在发育的胚胎或胎儿的状态。
+
+## The **predecessor** of the current manager was known for innovative strategies.
+Forerunner, Antecedent
+The root word is "cess," from Latin "cedere," meaning "to go." "Pre-" means "before," so "predecessor" literally means "one who goes before."
+根词是"cess"，来源于拉丁语"cedere"，意思是"去"。"Pre-"意味着"之前"，所以"predecessor"字面上的意思是"一个在前面走的人"。
+A predecessor is someone who held a position or role before the current holder.
+前任是指在当前持有者之前曾担任过某个职位或角色的人。
+
+## The **predominant** feature of the landscape is its mountainous terrain.
+dominant, chief
+The word **predominant** comes from the Latin root "prae-" meaning "before" or "in front of" and "dominare" meaning "to rule" or "to dominate." The combination of these roots implies having a position of power or influence.
+"**Predominant**"这个词源于拉丁语根词"prae-"，意思是"在…之前"或"在…前面"，以及"dominare"，意思是"统治"或"支配"。这些词根的结合意味着拥有权力或影响力的位置。
+**Predominant** means having greater importance, influence, or presence compared to others.
+"**Predominant**" 意味着相比其他事物具有更大的重要性、影响力或存在感。
+
+## To **predict** the weather, scientists use various tools and data.
+Alternatives: forecast, anticipate
+The word **predict** comes from Latin *praedicere*, where *prae-* means "before" and *dicere* means "to say."
+"predict" 这个词来源于拉丁语 *praedicere*，其中 *prae-* 意为"之前"，*dicere* 意为"说"。
+Definition: To say or estimate that something will happen in the future based on current evidence or trends.
+定义：根据当前的证据或趋势，说或估计某事将来会发生。
+
+## **Prejudice** refers to an unfair judgment or dislike of someone based on their group membership.
+Bias, discrimination
+The word **prejudice** comes from Latin roots: "pre-" meaning "before" and "judicium" meaning "judgment". It originally referred to a judgment formed beforehand, without full knowledge.
+"**偏见**"这个词源于拉丁语："pre-" 意为"之前"，而"judicium" 意为"判断"。它最初指的是在没有充分了解的情况下，提前形成的判断。
+**Prejudice** means forming an opinion about someone or something without proper knowledge or evidence, often leading to unfair treatment.
+"偏见"指的是在没有适当知识或证据的情况下对某人或某事形成观点，这通常会导致不公平的对待。
+
+
+
+
+
+
+
+## The term **pregnancy** refers to the state of carrying a developing embryo or fetus within the uterus.
+Alternative words: gestation, maternity
+Root words and affixes: The word **pregnancy** comes from the Latin word "prae-gnans," which means "pre- (before) + gnasci (to be born)." The suffix "-cy" denotes a state or condition.
+词根和词缀：**pregnancy** 这个词源于拉丁语"prae-gnans"，意思是"pre-（之前）+ gnasci（出生）"。后缀"-cy"表示状态或条件。
+Definition: **Pregnancy** is the condition in which a woman has a developing fetus inside her uterus, typically lasting about nine months.
+定义：**怀孕** 是指女性子宫内有一个正在发育的胎儿，通常持续约九个月的状态。
+
+## **Preferable** means more desirable or suitable.
+Better, preferred
+The root word is "prefer," from Latin "praeferre," meaning "to carry before." The suffix "-able" indicates capability or suitability.
+词根是"prefer"，来自拉丁语"praeferre"，意思是"在前面携带"。后缀"-able"表示能力或适合性。
+**Preferable** means something that is more desirable or advantageous in a given situation.
+"Preferable" 意味着在特定情况下更具吸引力或更有利的事物。
+
+## The **predict** outcome based on current data.
+forecast, anticipate
+The root word "predict" comes from Latin "praedictus," which means "foretell" and is derived from "prae-" (before) and "dicere" (to say).
+根词"predict"源自拉丁语"praedictus"，意为"预言"，由"prae-"（前）和"dicere"（说）构成。
+To predict is to say or estimate what will happen in the future based on current information or patterns.
+预测就是根据当前的信息或模式，说出或估计未来将会发生什么。
+
+## The **prediction** was accurate about the weather.
+Alternatives: forecast, projection
+Root words and affixes: The word "prediction" comes from the Latin word "predictio," which is derived from "prae-" meaning "before" and "dicere" meaning "to say." So, "prediction" combines these roots to mean "to say before" or "to foretell."
+词根和词缀：单词"prediction"来自拉丁词"predictio"，该词源自"prae-"意为"在……之前"和"dicere"意为"说"。因此，"prediction"结合了这些词根，意为"预言"或"预告"。
+Definition: A prediction is a statement or claim about what will happen in the future based on current evidence or past experiences.
+定义：预测是基于当前证据或过去经验对未来将发生的事情做出的陈述或声明。
+
+## The term **predecessor** refers to someone or something that came before another in a particular position or role.
+- Forebear
+- Precursor
+The translation of "Precursor" into Chinese is "前体" (qiántǐ) or "前兆" (qiánzhào), depending on the context. Which context are you referring to?
+The root word is "cess," from Latin "cedere," meaning "to go" or "to yield." The prefix "pre-" means "before." Together, "predecessor" means "one who goes before."
+词根是"cess"，来源于拉丁语"cedere"，意思是"去"或"让步"。前缀"pre-"表示"在…之前"。因此，"predecessor"意为"在前的人"。
+
+## Understanding **prejudice**
+Bias, discrimination
+The word **prejudice** comes from the Latin root *praeiudicium*, which means "prior judgment" (from *prae* meaning "before" and *iudicium* meaning "judgment").
+"偏见"这个词源自拉丁语词根 *praeiudicium*，意思是"先入为主的判断"（其中 *prae* 意为"之前"，*iudicium* 意为"判断"）。
+It refers to preconceived opinions or judgments about people or things without sufficient knowledge or understanding.
+它指的是在没有足够知识或理解的情况下，对人或事物的先入为主的看法或判断。
+
+## The **predominant** color in the painting is blue.
+Main, leading
+The word "predominant" comes from the Latin word "praedominari," where "prae-" means "before" and "dominari" means "to rule." The prefix "pre-" suggests superiority or primary status in a certain context.
+"主导"这个词来源于拉丁语单词"praedominari"，其中"prae-"意为"在……之前"，"dominari"意为"统治"。前缀"pre-"暗示了在某种背景下的优越性或主要地位。
+Definition: Most important, powerful, or noticeable in a particular situation.
+定义：在特定情况下，最重要、最有力或最显著的。
+
+## Understanding **preference**
+Alternatives: choice, liking
+The root word is "prefer," which comes from Latin "praeferre," meaning "to carry before." The suffix "-ence" turns the verb into a noun, indicating a state or quality.
+词根是"prefer"，源自拉丁语"praeferre"，意为"优先考虑"。后缀"-ence"将动词转化为名词，表示一种状态或性质。
+Definition: **Preference** refers to a greater liking for one alternative over others.
+定义：**偏好**指的是对某一选项比其他选项有更大的喜好。
+
+## **Preface** is an introduction to a book or speech.
+Introduction, Foreword
+The root of **preface** is from the Latin word "praefatio," where "prae-" means "before" and "fatio" comes from "facere," meaning "to do or make."
+**前言**的词根来自拉丁词"praefatio"，其中"prae-"意为"之前"，而"fatio"源自"facere"，意思是"做或制造"。
+A **preface** is a section at the beginning of a book or speech that explains its purpose or background.
+**前言** 是书籍或演讲开头的部分，解释其目的或背景。
+
+## The woman is **pregnant** with her first child.
+Expecting, with child
+The word **pregnant** comes from Latin "praegnans," meaning "with child," from "prae-" (before) and "gnasci" (to be born).
+**孕**这个词来源于拉丁语"praegnans"，意思是"怀孕"，由"prae-"（之前）和"gnasci"（出生）组成。
+It means having a baby developing inside the womb.
+它的意思是指胎儿在子宫内发育。
+
+
+
+
+
+
+
+
+
+## **Predecessor** refers to someone or something that came before another in a position or role.
+1. Forerunner
+2. Antecedent
+"2. 前因"
+The root word is "pre-" meaning "before," and "decessor" comes from Latin "decessus," meaning "departure." The word combines these to imply someone who departs or exits before another takes over.
+词根是"pre-"，意为"在……之前"，而"decessor"来自拉丁语"decessus"，意为"离开"。这个词结合了这两个意思，暗示着在另一个人接替之前离开或退出的人。
+
+## Understanding **prejudice**
+bias, discrimination
+The word **prejudice** comes from Latin "praejudicium," meaning "a judgment in advance," from "prae-" (before) and "judicium" (judgment).
+"偏见"一词源自拉丁语"praejudicium"，意为"提前的判断"，由"prae-"（在前）和"judicium"（判断）组成。
+**Prejudice** refers to a preconceived opinion or judgment about someone or something, often based on limited information or irrational feelings.
+"**偏见**"指的是对某人或某事的先入为主的看法或判断，通常基于有限的信息或不理性的情感。
+
+## The word **pregnant** describes someone who is expecting a baby.
+Expecting, expecting a child
+The word **pregnant** comes from the Latin root "praegnans," which combines "prae-" meaning "before" and "gnasci" meaning "to be born."
+"孕"这个词来自拉丁语根"praegnans"，它结合了"prae-"意为"之前"和"gnasci"意为"出生"。
+It means having a baby developing inside the body.
+这意味着有一个婴儿在身体内部发育。
+
+## The author wrote a **preface** to introduce the book.
+Alternatives: introduction, foreword
+Root words and affixes: The word **preface** comes from the Latin "praefatio," which is a combination of "prae-" meaning "before" and "fari," meaning "to speak."
+词根和词缀：**preace** 这个词来源于拉丁语"praefatio"，它是"prae-"（意为"在前"）和"fari"（意为"说"）的结合。
+Definition: A **preface** is an introductory section of a book, usually written by the author, explaining the background, purpose, or other relevant information before the main text begins.
+定义：**前言**是一本书的引言部分，通常由作者撰写，用于解释背景、目的或其他相关信息，然后才是正文内容。
+
+## **Preferable** means more desirable or suitable in a given situation.
+Better, more desirable
+The root word is "prefer," which comes from the Latin "praeferre," meaning "to carry before" or "to favor." The suffix "-able" means "capable of" or "suitable for."
+根词是"prefer"，来自拉丁语"praeferre"，意为"在前面携带"或"偏爱"。后缀"-able"表示"能够"或"适合"。
+**Preferable** describes something that is more preferred or favored over another option.
+"Preferable" 描述的是相对于另一个选项更受青睐或更被偏爱的事物。
+
+## The **predominant** color in the painting is blue.
+Main, chief
+The word "predominant" comes from the Latin root "praedominari," which means "to rule over." It is formed from "prae-" meaning "before" or "in front of," and "dominari," which means "to dominate."
+"主导"这个词源于拉丁语"praedominari"，意思是"统治"。它由"prae-"构成，意为"在前"或"在...之前"，以及"dominari"，意为"支配"。
+Definition: Most important, powerful, or influential in a particular situation.
+定义：在特定情况下，最重要、最强大或最有影响力的。
+
+## Understanding the word **preference**
+Alternatives: choice, liking
+The word **preference** comes from the Latin word *praeferre*, where *prae-* means "before" and *ferre* means "to carry." It implies valuing something more highly than another.
+"**Preference**" 这个词来源于拉丁语单词 *praeferre*，其中 *prae-* 意为"在……之前"，*ferre* 意为"携带"。它意味着比其他事物更高地评价某事物。
+Definition: **Preference** is a greater liking for one alternative over others.
+定义：**偏好**是对一种选择比其他选择更喜欢。
+
+## **Prediction** is a guess about what will happen in the future
+Forecast, estimate
+The root word is "dict," from Latin "dictio" meaning "saying" or "speaking," combined with the prefix "pre-" meaning "before."
+根词是"dict"，源自拉丁语"dictio"，意为"说"或"讲"，与前缀"pre-"结合，表示"在前"。
+A statement or claim about what is expected to happen in the future.
+对未来将会发生的事情的一种陈述或声明。
+
+## **Pregnancy** is the state of carrying a developing embryo or fetus within the female body.
+Alternatives: gestation, childbirth
+Root words and affixes: The root is "pregnant," from Latin "praegnantia," meaning "condition of being with child."
+词根和词缀：词根是"pregnant"，来源于拉丁语"praegnantia"，意为"怀孕的状态"。
+Definition: The period during which a woman carries a developing baby in her womb.
+定义：女性在子宫内怀孕期间的阶段。
+
+
+
+
+
+## The **prescription** is a written order for medication from a doctor.
+Order, prescription
+The root word is "scribe," from Latin "scribere" meaning "to write," with the prefix "pre-" meaning "before," indicating something written in advance.
+词根是"scribe"，来源于拉丁语"scribere"，意思是"书写"。前缀"pre-"表示"之前"，意味着某些东西是在之前就已书写好的。
+A **prescription** is a formal document written by a doctor that authorizes a patient to obtain and use medication.
+**处方**是医生书写的正式文件，授权患者获得和使用药物。
+
+## The **preliminary** meeting helped us plan the project.
+**initial**, **preparatory**
+The word "preliminary" comes from the Latin root "prae-" meaning "before" and "limin-" meaning "threshold" or "limit." The suffix "-ary" is used to form adjectives, meaning "related to" or "pertaining to."
+"preliminary"这个词来源于拉丁语根词"prae-"，意为"在……之前"，以及"limin-"，意为"门槛"或"界限"。后缀"-ary"用于构成形容词，意为"相关的"或"属于"。
+**Preliminary** refers to something that occurs before the main event or process, usually to prepare or set the stage for it.
+"Preliminary" 指的是发生在主要事件或过程之前的事情，通常是为了准备或为其铺垫。
+
+## A **prelude** is an introductory section of a work.
+Introduction, Prelude
+The root word is from the Latin "prae-" meaning "before" and "ludere" meaning "to play." The prefix "pre-" means "before," and "lude" relates to "play" or "perform."
+这个词的词根来自拉丁语中的"prae-"，意为"之前"，以及"ludere"，意为"玩"。前缀"pre-"意为"之前"，而"lude"与"玩"或"表演"有关。
+A **prelude** is an introductory or preliminary event or action that precedes and sets the stage for the main part of something.
+**序幕**是指在主要部分之前发生的引导性或初步性的事件或行动，为主要内容铺垫和奠定基础。
+
+## The doctor will **prescribe** medication for your illness.
+recommend, suggest
+The word **prescribe** comes from the Latin **praescribere**, which means "to write before" (**prae-** meaning "before" and **scribere** meaning "to write").
+单词 **prescribe** 来源于拉丁语 **praescribere**，意思是"提前写"（**prae-** 意为"之前"，**scribere** 意为"写"）。
+To **prescribe** means to authorize the use of a medicine or treatment for someone, typically by a doctor.
+"**处方**"意味着授权使用某种药物或治疗，通常由医生开具。
+
+## The **presence** of the CEO was essential for the meeting.
+Presence alternatives: attendance, existence
+The word "presence" comes from the Latin "praesentia," which means "being at hand" or "being present." It is derived from "praesens," meaning "present," which combines "prae-" (before) and "esse" (to be).
+"Presence"一词源自拉丁语"praesentia"，意为"在手边"或"存在"。它派生自"praesens"，即"现在的"，由"prae-"（在前）和"esse"（存在）组成。
+Definition: The state of being present in a place or situation.
+定义：存在于一个地方或情况中的状态。
+
+## Understanding **presentation**
+Alternatives: **demonstration**, **display**
+The word **presentation** comes from the Latin root "praesentatio," which means "a showing" or "a display." It is formed from "praesentare," which combines "prae-" (before) and "sentare" (to show). The suffix "-tion" indicates the action or result of the verb.
+"Presentation" 这个词来源于拉丁语词根 "praesentatio"，意为 "展示" 或 "陈列"。它由 "praesentare" 形成，结合了 "prae-"（之前）和 "sentare"（展示）。后缀 "-tion" 表示动词的动作或结果。
+**Presentation** refers to the act of showing or explaining information to an audience, often involving visual aids or verbal communication.
+"**展示**"指的是向观众展示或解释信息的行为，通常包括视觉辅助材料或口头沟通。
+
+## The gift was beautifully wrapped in **present** paper.
+gift, offer
+The word **present** comes from the Latin root "praesens," which means "being at hand." It combines "prae-" (before) and "esse" (to be). The prefix "pre-" and suffix "-ent" are not directly part of the root but influence the modern usage.
+"present" 这个词源于拉丁语词根"praesens"，意为"在手边"。它结合了"prae-"（之前）和"esse"（存在）。前缀"pre-"和后缀"-ent"虽然不直接属于词根，但影响了现代用法。
+Definition: A **present** is a gift given to someone or an event occurring at the current time.
+定义：**现在**是指送给某人的礼物或在当前时间发生的事件。
+
+## **Premium** is a term often used to describe something of high quality or higher cost.
+Alternatives: high-quality, deluxe
+The word "premium" comes from the Latin word "praemium," which means reward or prize. It is formed from "prae" (before) and "emere" (to buy).
+"premium"这个词来自拉丁语"praemium"，意为奖励或奖品。它由"prae"（之前）和"emere"（购买）组成。
+**Premium** refers to something that is superior in quality or carries an additional cost due to its higher value.
+"优质"指的是质量更高或因其更高价值而附带额外费用的事物。
+
+## The **premature** baby was born three months early.
+Early, Untimely
+The root word is "mature," meaning fully developed. The prefix "pre-" means before. So, "premature" literally means "before maturity."
+词根是"mature"，意为"成熟的"。前缀"pre-"意味着"在……之前"。因此，"premature"字面意思是"在成熟之前"。
+**Premature** means occurring or done before the proper time.
+"**Premature**" 的意思
+
+## The doctor **prescribed** medication for the patient.
+recommend, order
+The root word is "scribe," which means to write. The prefix "pre-" means before, so "prescribe" means to write down instructions beforehand.
+词根是"scribe"，意思是写。前缀"pre-"表示在之前，所以"prescribe"意味着提前写下指示。
+Definition: To officially recommend or order something, especially medicine, for someone to use.
+定义：正式推荐或
+
+
+## **Premium** refers to something of higher quality or higher price.
+Alternative words: superior, exclusive
+Root words: "premium" comes from the Latin "praemium," meaning "reward" or "prize." It has no affixes.
+词根："premium" 来自拉丁语 "praemium"，意为"奖励"或"奖品"。它没有词缀。
+Definition: **Premium** means something that is of superior quality or higher value, often requiring a higher price.
+定义：**优质**指的是某物具有卓越的质量或更高的价值，通常需要更高的价格。
+
+## **Prescription** is a written order from a doctor for medication or treatment.
+Alternatives: **order**, **recommendation**
+The word "prescription" comes from the Latin word "praescriptio," meaning "a writing before." It combines "prae-" (before) and "scriptio" (writing), indicating something written beforehand.
+"处方"一词源自拉丁语"praescriptio"，意为"前面的书写"。它结合了"prae-"（之前）和"scriptio"（书写），指的是事先书写的东西。
+Definition: A **prescription** is a formal document from a healthcare provider authorizing the use of medication or treatment.
+定义：**处方**是来自医疗提供者的正式文件，授权使用药物或治疗。
+
+## The **preliminary** results were promising.
+Initial, preparatory
+The word **preliminary** comes from Latin "prae-" meaning "before" and "limin-" meaning "threshold" or "limit," so it refers to something that comes before the main event or action.
+"**Preliminary**" 这个词来源于拉丁语，其中"prae-" 意为"在前"，而"limin-" 意为"门槛"或"限制"，因此它指的是在主要事件或行动之前的事物。
+It means something that occurs at an early stage and is used as a precursor to the main or ultimate action.
+它指的是在早期阶段发生的某件事，用作主要或最终行动的前兆。
+
+## To **prescribe** medication, a doctor must evaluate the patient's condition.
+Suggest, Recommend
+The root word is "scribe," from Latin "scribere," meaning "to write." The prefix "pre-" means "before," indicating something done in advance.
+词根是"scribe"，来源于拉丁语"scribere"，意为"写"。前缀"pre-"意为"之前"，表示提前做的事情。
+Definition: To officially recommend or authorize the use of a treatment or medication.
+定义：正式推荐或授权
+
+## The **present** is a gift given during holidays.
+Alternatives: gift, offering
+Root words and affixes: The word **present** comes from the Latin "praesentare," meaning "to place before" or "to show." It combines "prae-" (before) with "esse" (to be), reflecting its use as something that is presented or given.
+词根和词缀：**present** 这个词来源于拉丁语"praesentare"，意思是"置于前面"或"展示"。它结合了"prae-"（在前）和"esse"（存在），反映了它作为被展示或给予的东西的用法。
+Definition: **Present** means something given to someone, usually as a gift or at a particular time.
+定义：**Present** 指的是给予某人某物，通常作为礼物或在特定时间。
+
+## **Premature** means happening too early.
+Early, Untimely
+The word **premature** comes from Latin "praematurus," where "prae-" means "before" and "maturus" means "mature" or "ripe."
+"**Premature**" 这个词来源于拉丁语"praematurus"，其中"prae-"意为"在……之前"，而"maturus"意为"成熟"或"熟透"。
+Definition: Occurring or done before the usual or expected time.
+定义：在通常或预期时间之前发生或完成的。
+
+## The doctor **prescribed** a new medication for the patient.
+Recommended, ordered
+The word "prescribed" comes from the Latin "praescribere," which means "to write before." It combines "prae-" (before) and "scribere" (to write).
+"Prescribed"这个词来源于拉丁语"praescribere"，意思是"提前书写"。它结合了"prae-"（之前）和"scribere"（书写）。
+To officially recommend or direct the use of something, typically medication or treatment.
+正式推荐或指示使用某物，通常是药物或治疗方法。
+
+## The **presentation** of the project was impressive.
+Alternatives: display, talk
+Root words and affixes: The word "presentation" comes from the Latin root "praesentatio," which is from "praesentare," meaning "to present." The prefix "pre-" means "before," and the root "sentare" relates to "send." The suffix "-tion" turns the verb into a noun, indicating an action or result.
+词根和词缀：词语"presentation"源于拉丁语词根"praesentatio"，这个词根来自于"praesentare"，意思是"展示"。前缀"pre-"表示"之前"，而词根"sentare"与"发送"相关。后缀"-tion"将动词转化为名词，表示一个动作或结果。
+Definition: A **presentation** is the act of showing or explaining content to an audience, often through a speech or visual aids.
+定义：**演示**是通过演讲或视觉辅助工具向观众展示或解释内容的行为。
+
+## A **prelude** is an introductory section that sets the stage for what follows.
+Prelude synonyms: introduction, prologue
+The word "prelude" comes from the Latin "praeludium," meaning "a preliminary play or performance," from "prae-" (before) and "ludere" (to play).
+"前奏"这个词源自拉丁语"praeludium"，意思是"一个初步的演出或表演"，由"prae-"（在前）和"ludere"（玩耍）组成。
+Definition: A preliminary or introductory event or action.
+定义：一个初步或引导性的事件或行动。
+
+## The **presence** of a leader was felt throughout the room.
+- Existence
+- Attendance
+"Attendance" in Chinese is "出席" (chūxí).
+The root word is "present," derived from Latin "praesens," meaning "being at hand." The suffix "-ence" turns the adjective "present" into a noun.
+词根是"present"，源自拉丁语"praesens"，意为"在手边"。后缀"-ence"将形容词"present"转变为名词。
+
+## This is just a **preliminary** report.
+initial, preparatory
+The word "preliminary" comes from the Latin root "preliminaris," where "pre-" means "before" or "prior to," and "limen" means "threshold" or "entrance."
+"预备"一词来源于拉丁语根词"preliminaris"，其中"pre-"意为"之前"或"先于"，而"limen"则意为"门槛"或"入口"。
+Brief and accurate definition: Preliminary refers to something that comes before or prepares for something more important or fuller in context.
+简洁而准确的定义：初步是指在某个更重要或更完整的事物之前或为其做准备的事物。
+

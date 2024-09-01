@@ -29,14 +29,16 @@ class LearnCard:
 class LLM_Client:
     # available models:
     # gpt-3.5-turbo, gpt-4o
-    # model = "gpt-4o"  1000 times of 150q 60a for 10usd .
-    model = "gpt-3.5-turbo"  # 25K times
+    # model = "gpt-4o"  #1000 times of 150q 60a for 10usd .
+    # model = "gpt-3.5-turbo"  # 25K times
+    model = "gpt-3.5-turbo-0125"  # cheapest
 
     def __init__(self):
         self.client = self._create_llm_client()
 
     def _get_api_token(self):
-        api_token = os.environ.get("LLM_API_KEY")
+        # api_token = os.environ.get("LLM_API_KEY")
+        api_token = os.environ.get("LLM_API_KEY2") # 3.5 only key.
         if api_token is None:
             print(
                 "Error: shell env key not found: LLM_API_KEY is not set.",
@@ -104,17 +106,17 @@ Requirements are as follows:
 
 
 def write_to_card_file(content):
-    os.makedirs("data", exist_ok=True)
+    if not content:
+        print("No content to write.")
+        return
+
     try:
         with file_lock:
-            with open("data/cards03.md", "a") as file:
+            # with statement ensures that the lock is properly acquired and released
+            with open("data/cards02.md", "a") as file:
                 file.write(content)
-    except IOError as e:
-        print(f"Error writing to file: {e}", file=sys.stderr)
-        sys.exit(1)
     except Exception as e:
-        print(f"Unexpected error writing to file: {e}", file=sys.stderr)
-        sys.exit(1)
+        print(f"An error occurred by write_to_card_file(): {e}")
 
 
 def gen_card_eng(llm_client, input_text):
@@ -125,10 +127,7 @@ def gen_card_eng(llm_client, input_text):
 
 
 def trans_to_chn(llm_client, src_text):
-    translate_prompt = (
-        "translate the following text into Chinese:"
-        + src_text
-    )
+    translate_prompt = "translate the following text into Chinese:" + src_text
     ret = llm_client.ask(translate_prompt)
     return chn_char_into_eng_char(ret)
 
@@ -177,24 +176,28 @@ def google_translate(text, target_language="zh-CN"):
         exit(1)
 
 
+def process_word(word, llm_client):
+    card_text_eng = gen_card_eng(llm_client, word)
+    card = parse_card_content(card_text_eng)
+    src_explain_chn = trans_to_chn(llm_client, card.back.src_explain)
+    word_def_chn = trans_to_chn(llm_client, card.back.word_def)
+    card.back.src_explain += f"\n{src_explain_chn}"
+    card.back.word_def += f"\n{word_def_chn}"
+    print(card)
+    write_to_card_file(str(card) + "\n")
+    # TODO: write_to_card_file(card + "\n")  never raise TypeError, why? Especailly here. it run it in ut. it will raise TypeError. Which make this bug a little subtle to detect.
+
+
 def main():
     words = read_words_from_file("data/filtered_words.txt")
-    selected_words = words[2003:2005]
+    selected_words = words[3010:3011]
     words = selected_words
     llm_client = LLM_Client()
 
-    def process_word(word):
-        card_text_eng = gen_card_eng(llm_client, word)
-        card = parse_card_content(card_text_eng)
-        src_explain_chn = trans_to_chn(llm_client, card.back.src_explain)
-        word_def_chn = trans_to_chn(llm_client, card.back.word_def)
-        card.back.src_explain += f"\n{src_explain_chn}"
-        card.back.word_def += f"\n{word_def_chn}"
-        write_to_card_file(card+"\n")
-
     max_workers = multiprocessing.cpu_count()
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        executor.map(process_word, words)
+        executor.map(lambda word: process_word(word, llm_client), words)
+
 
 if __name__ == "__main__":
     main()

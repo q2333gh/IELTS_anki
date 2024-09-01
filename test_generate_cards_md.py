@@ -1,11 +1,14 @@
 import unittest
 import os
 from unittest.mock import patch, mock_open
+
+from openai import OpenAI
 from generate_cards_md import (
+    LLM_Client,
+    LearnCard,
     chn_char_into_eng_char,
     read_words_from_file,
     gen_card_prompt,
-    split_a_card,
     write_to_card_file,
     google_translate,
 )
@@ -57,14 +60,6 @@ class TestGeneratePrompt(unittest.TestCase):
         self.assertIn("I am a native Chinese speaker", prompt)
 
 
-class TestSplitACard(unittest.TestCase):
-    def test_split_a_card(self):
-        test_card = "## Front content\nBack content line 1\nBack content line 2"
-        front, back = split_a_card(test_card)
-        self.assertEqual(front, "## Front content\n")
-        self.assertEqual(back, "Back content line 1\nBack content line 2")
-
-
 class TestWriteToFile(unittest.TestCase):
     @patch("os.makedirs")
     @patch("builtins.open", new_callable=mock_open)
@@ -80,7 +75,6 @@ class TestWriteToFile(unittest.TestCase):
 # 9.504998 to 9.39 -> 0.11
 # 1 card: 0.11/100 = 0.0011
 # 5k cards: 0.0011 * 5000 = 5.5
-
 
 
 class TestGoogleTranslate(unittest.TestCase):
@@ -103,3 +97,40 @@ class TestGoogleTranslate(unittest.TestCase):
         result = google_translate("Hello, world!")  # No language specified
         self.assertIsNotNone(result)  # We can't predict the exact translation, but it should not be None
         self.assertNotEqual(result, "Hello, world!")  # It should be translated
+
+
+class T1:
+    f1="ss"
+    f2=1
+    def __str__(self):
+        return self.f1
+import concurrent.futures
+
+class TestTypeErr(unittest.TestCase):
+    def test_type_err(self):
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future = executor.submit(lambda: T1() + "123")
+            result = future.result()
+        return result
+
+
+class TestWriteToCardFile(unittest.TestCase):
+    def test_write_to_card_file_with_object_concat(self):
+        card = LearnCard("front", "alt_words", "src_explain", "word_def")
+        content = card + "123"
+        
+        with unittest.mock.patch("builtins.open", unittest.mock.mock_open()) as mock_file:
+            write_to_card_file(content)
+            mock_file.assert_called_once_with("data/cards02.md", "a")
+            mock_file().write.assert_called_once_with(content)
+
+
+class TestLLMClient(unittest.TestCase):
+    def setUp(self):
+        self.llm_client = LLM_Client()
+
+    def test_ask_success(self):
+        prompt = "Test prompt"
+        response = self.llm_client.ask(prompt, model="claude-3-haiku")
+        print(response)
+        self.assertEqual(response, "Test response")
