@@ -70,35 +70,10 @@ I am a native Chinese speaker and need to learn English a word: {input_text}
 The requirements are as follows:
 1. Please answer in plain text format, do not use Markdown.
 2. The answer should only include the following content:
-  01. Start with 2 #, followed by a space, and use appropriate wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
+  01. Start with 2 #, followed by a space, and use appropriate and brief wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
   02. Briefly and comprehensively explain the root and affixes, and the origin of the word in English.
   03. Brief and accurate definition.  
 """
-
-
-'''
-prompt_cn=f"""
-回答应该是从英文语料库解决问题,并翻译为中文回答:
-我是中文母语者,需要学习英文单词:  {input_text}
-要求如下:
-1. 请用纯文本格式回答，不要使用Markdown。
-2. 回答只包含如下内容:
-  01.格式为 2个# 开头,接上一个空格,使用合适的措辞造句一句,要求造句简短且准确地使用这个词最常用的用法,将要学习的词 包裹在** ** 中,然后回车新的一行
-  02. 简要且无遗漏地用中文解释词根词缀,来源  
-  03. 释义
-"""
-
-prompt_eng=f"""
-The answer should be derived from the English corpus to solve the problem and translated into Chinese:
-I am a native Chinese speaker and need to learn English words: {input_text}
-The requirements are as follows:
-1. Please answer in plain text format, do not use Markdown.
-2. The answer should only include the following content:
-  01. Start with 2 #, followed by a space, and use appropriate wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
-  02. Briefly and comprehensively explain the root and affixes, and the origin of the word in Chinese.
-  03. Definition.
-"""
-'''
 
 
 def write_to_file(content):
@@ -108,9 +83,6 @@ def write_to_file(content):
             file.write(content)
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
-        sys.exit(1)
-    except FileNotFoundError:
-        print(f"Error: File 'data/cards.md' not found.", file=sys.stderr)
         sys.exit(1)
     except Exception as e:
         print(f"Unexpected error writing to file: {e}", file=sys.stderr)
@@ -122,25 +94,35 @@ def generate_card(openai_client, input_text):
     eng_res = openai_client.get_completion(prompt)
     return eng_res
 
-def chn_char_into_eng_char(text):
-    return text.replace(""", '"').replace(""", '"')
+
+if __name__ == "__main__":
+    unittest.main()
+
 
 def translate_to_chinese(openai_client, src_text):
     translate_prompt = (
-        "translate the following text into Chinese , dont modify any symbols"
+        "translate the following text into Chinese , your answer  dont modify any symbols"
         + src_text
     )
     ret = openai_client.get_completion(translate_prompt)
     return chn_char_into_eng_char(ret)
 
 
+def chn_char_into_eng_char(text):
+    return text.replace("“", '"').replace("”", '"')
+
+
 def split_a_card(src_text):
-    lines = src_text.split('\n')
-    part1 = [line for line in lines if line.startswith("##")]
-    part2 = [line for line in lines if not line.startswith("##")]
-    part1_text = '\n'.join(part1)+'\n'
-    part2_text = '\n'.join(part2)
-    return part1_text, part2_text
+    lines = src_text.split("\n")
+    front = []
+    back = []
+    for line in lines:
+        if line.startswith("##"):
+            front.append(line)
+        else:
+            back.append(line)
+    return "\n".join(front) + "\n", "\n".join(back)
+
 
 def main():
     input_text = "chronic"
@@ -149,8 +131,30 @@ def main():
     print(card_eng)
     front, back_eng = split_a_card(card_eng)
     card_chn = front + translate_to_chinese(llm_client, back_eng)
-    print(card_chn)
+    # print(card_chn)
     write_to_file(card_chn)
+
 
 if __name__ == "__main__":
     main()
+
+
+import unittest
+
+
+#  py3 -m unittest generate_cards_md.TestChnCharIntoEngChar
+class TestChnCharIntoEngChar(unittest.TestCase):
+    def test_chn_char_into_eng_char(self):
+        # Test case 1: Chinese quotation marks
+        self.assertEqual(chn_char_into_eng_char("”Hello”"), '"Hello"')
+
+        # Test case 2: Mixed Chinese and English quotation marks
+        self.assertEqual(
+            chn_char_into_eng_char('"Hello" and "World"'), '"Hello" and "World"'
+        )
+
+        # Test case 3: No Chinese quotation marks
+        self.assertEqual(chn_char_into_eng_char("Hello World"), "Hello World")
+
+        # Test case 4: Empty string
+        self.assertEqual(chn_char_into_eng_char(""), "")
