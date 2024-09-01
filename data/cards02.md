@@ -61,3 +61,50 @@ Definition: To cause someone to feel ashamed or degraded.
 
 2. The word "humid" comes from the Latin word "humidus," which means "moist" or "damp." It is formed from "humor," meaning "liquid" or "moisture," with the suffix "-id" indicating a characteristic.
 3. Having a lot of moisture in the air; damp.
+
+
+
+
+
+## The feeling of **hunger** prompts the need to eat.
+Starvation, craving
+The word "hunger" comes from the Old English word "hungor," which is related to the Proto-Germanic "hungraz." It is derived from the Proto-Indo-European root "kenk-" meaning "to be hungry."
+"hunger" 这个词来源于古英语的 "hungor"，它与原始日耳曼语的 "hungraz" 相关。它源自原始印欧语根词 "kenk-"，意为"感到饥饿"。
+
+
+**Hunger** refers to the physical sensation of needing food or the condition of being in need of food.
+**Hunger** 指的是对食物的身体感觉或需要食物的状态。
+
+
+## The weather was **humid** today.
+Moist, damp
+The word **humid** comes from the Latin word "humidus," meaning "wet" or "moist," with no affixes.
+这个词**humid**源自拉丁词"humidus"，意思是"湿的"或"潮湿的"，没有任何词缀。
+
+
+**Humid** means having a high level of moisture in the air.
+**Humid** 意味着空气中有高水平的湿气。
+
+
+## To **humiliate** someone is to make them feel very embarrassed or ashamed.
+Embarrass, degrade
+The root word is "humil" from Latin "humilis," meaning "low" or "humble." The suffix "-ate" turns it into a verb, indicating the action of causing someone to be in a low or humble position.
+词根是拉丁语"humilis"的"humil"，意思是"低"或"谦逊"。后缀"-ate"将其变成动词，表示使某人处于低或谦逊的位置的行为。
+
+
+To **humiliate** means to make someone feel extremely embarrassed or ashamed, often by belittling them or exposing their flaws.
+To **humiliate** means to make someone feel extremely embarrassed or ashamed, often by belittling them or exposing their flaws.
+
+**羞辱** 的意思是让某人感到非常尴尬或羞愧，通常是通过贬低他们或暴露他们的缺点。
+
+
+## The **humidity** level is high today.
+moisture, dampness
+The root word is "hum-" derived from Latin "humere," meaning to be moist or damp. The suffix "-ity" turns the adjective "humid" into a noun.
+词根是"hum-"，源自拉丁语"humere"，意为潮湿或湿润。后缀"-ity"将形容词"humid"转变为名词。
+
+
+Humidity refers to the amount of moisture or water vapor in the air.
+湿度指的是空气中水分或水汽的量。
+
+

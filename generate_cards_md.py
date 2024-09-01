@@ -3,9 +3,25 @@ import httpx
 import os
 import sys
 import threading
+import requests
+import concurrent.futures
+import multiprocessing
 
 file_lock = threading.Lock()
 
+class Back:
+    def __init__(self, alternative_words, src_explain, word_def):
+        self.alternative_words = alternative_words
+        self.src_explain = src_explain
+        self.word_def = word_def
+
+class LearnCard:
+    def __init__(self, front, alternative_words, src_explain, word_def):
+        self.front = front
+        self.back = Back(alternative_words, src_explain, word_def)
+
+    def __str__(self):
+        return f"{self.front}\n{self.back.alternative_words}\n{self.back.src_explain}\n{self.back.word_def}\n"
 
 class LLM_Client:
     # available models:
@@ -51,7 +67,6 @@ class LLM_Client:
             print(f"Error generating completion: {e}", file=sys.stderr)
             sys.exit(1)
 
-
 def read_words_from_file(filename):
     try:
         with open(filename, "r") as file:
@@ -70,9 +85,7 @@ def read_words_from_file(filename):
         print(f"Unexpected error reading file '{filename}': {e}", file=sys.stderr)
         sys.exit(1)
 
-
 def gen_card_prompt(input_text):
-    # The answer should be derived from the English corpus to solve the problem and translated into Chinese:
     return f"""
 I need to learn English a word: {input_text}
 Requirements are as follows:
@@ -88,9 +101,9 @@ Requirements are as follows:
 def write_to_card_file(content):
     os.makedirs("data", exist_ok=True)
     try:
-        with file_lock:  # Acquire the lock before writing
+        with file_lock:
             with open("data/cards02.md", "a") as file:
-                file.write(content)
+                file.write(str(content))
     except IOError as e:
         print(f"Error writing to file: {e}", file=sys.stderr)
         sys.exit(1)
@@ -99,14 +112,14 @@ def write_to_card_file(content):
         sys.exit(1)
 
 
-def generate_card(llm_client, input_text):
+def gen_card_eng(llm_client, input_text):
     prompt = gen_card_prompt(input_text)
     # eng_res = llm_client.ask(prompt, model="gpt-4o")
     eng_res = llm_client.ask(prompt)
     return eng_res
 
 
-def translate_to_chinese(llm_client, src_text):
+def trans_to_chn(llm_client, src_text):
     translate_prompt = (
         "translate the following text into Chinese , your answer  dont modify any symbols"
         + src_text
@@ -119,28 +132,13 @@ def translate_to_chinese(llm_client, src_text):
 def chn_char_into_eng_char(text):
     return text.replace("“", '"').replace("”", '"')
 
-
-def split_a_card(src_text):
-    lines = [line for line in src_text.split("\n") if line.strip()]
-    front = lines[:2]
-    back = lines[2:]
-    return "\n".join(front) + "\n", "\n".join(back)
-
-
-def read_words_from_file():
-    try:
-        with open("data/filtered_words.txt", "r") as file:
-            words = [line.strip() for line in file]
-        return words
-    except FileNotFoundError:
-        print("Error: 'data/filtered_words.txt' not found.", file=sys.stderr)
-        exit(1)
-    except IOError as e:
-        print(f"Error reading file: {e}", file=sys.stderr)
-        exit(1)
-
-import requests
-
+def parse_card_content(content):
+    lines = [line.strip() for line in content.split('\n') if line.strip()]
+    front = lines[0]
+    alternative_words = lines[1]
+    src_explain = lines[2]
+    word_def = lines[3]
+    return LearnCard(front, alternative_words, src_explain, word_def)
 
 def google_translate(text, target_language="zh-CN"):
     """
@@ -170,23 +168,21 @@ def google_translate(text, target_language="zh-CN"):
     except requests.RequestException as e:
         print(f"Error occurred while translating: {e}")
         exit(1)
-        return text  # Return original text if translation fails
-
 
 def main():
-    import concurrent.futures
-    import multiprocessing
-
-    words = read_words_from_file()  # about 4000 words.
+    words = read_words_from_file("data/filtered_words.txt")
     selected_words = words[2003:2008]
     words = selected_words
     llm_client = LLM_Client()
 
     def process_word(word):
-        card_eng = generate_card(llm_client, word)
-        front, back_eng = split_a_card(card_eng)
-        card_chn = front + translate_to_chinese(llm_client, back_eng) + back_eng
-        write_to_card_file(card_chn + "\n")
+        card_text_eng = gen_card_eng(llm_client, word)
+        card = parse_card_content(card_text_eng)
+        src_explain_chn = trans_to_chn(llm_client, card.back.src_explain)
+        word_def_chn = trans_to_chn(llm_client, card.back.word_def)
+        card.back.src_explain += f"\n{src_explain_chn}"
+        card.back.word_def += f"\n{word_def_chn}"
+        write_to_card_file(card)
 
     max_workers = multiprocessing.cpu_count()
 
@@ -194,7 +190,6 @@ def main():
         max_workers=max_workers
     ) as executor:
         executor.map(process_word, words)
-
 
 if __name__ == "__main__":
     main()
