@@ -135,3 +135,23 @@ Definition: **Chronic** means persisting for a long time or constantly recurring
 
 定义：**Chronic** 指的是一种长期存在且持续的状况，通常进展缓慢。
 
+## His **chronic** cough lasted for months.
+"Chronic"一词源于希腊语"khronikos"，意思是"时间的"或"持久的"。它结合了"khronos"（时间）和后缀"-ic"，意思是"有关的"。
+
+定义："Chronic"描述的是一种持续很长时间或频繁复发的状况。
+
+## He suffers from a **chronic** cough that never seems to go away.
+这个词"chronic"来源于希腊语"khronos," 意思是"时间。"它使用了后缀"-ic," 将名词转为形容词。词根与时间或持续时间有关，表明某物持续存在或持久。
+
+**Chronic** 意思是持续很长时间或经常复发。
+
+## He suffers from **chronic** back pain.
+"Chronic"一词来自希腊词根"chronos"，意为时间。
+
+"Chronic"的定义是描述一种持续很长时间或不断复发的状态或疾病。
+
+## He has a **chronic** cough that won't go away.  
+**chronic** 这个词源自希腊词 "khronos"，意为 "时间"。它由词根 "chron-"（与时间有关）和后缀 "-ic"（表示特征或相关）组成。
+
+**Chronic** 指的是持续很长时间的事物，通常指的是长期存在且反复出现的疾病或状况。
+

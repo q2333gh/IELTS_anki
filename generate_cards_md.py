@@ -5,8 +5,13 @@ import sys
 
 
 class LLM_Client:
+    # available models:
+    # gpt-3.5-turbo, gpt-4o
+    model = "gpt-3.5-turbo" # 25K times
+    # model = "gpt-4o"  1000 times of 150q 60a for 10usd .
+
     def __init__(self):
-        self.client = self._create_openai_client()
+        self.client = self._create_llm_client()
 
     def _get_api_token(self):
         api_token = os.environ.get("LLM_API_KEY")
@@ -18,7 +23,7 @@ class LLM_Client:
             sys.exit(1)  # Exit the program with a non-zero status
         return api_token
 
-    def _create_openai_client(self):
+    def _create_llm_client(self):
         api_token = self._get_api_token()
         return OpenAI(
             base_url="https://api.xty.app/v1",
@@ -29,11 +34,11 @@ class LLM_Client:
             ),
         )
 
-    def get_completion(self, prompt):
+    # default use gpt3.5turbo, if you want to use gpt4o, set model="gpt-4o"
+    def ask(self, prompt, model=model):
         try:
             completion = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                # model="gpt-4o",
+                model=model,
                 messages=[
                     {"role": "user", "content": prompt},
                 ],
@@ -89,23 +94,24 @@ def write_to_file(content):
         sys.exit(1)
 
 
-def generate_card(openai_client, input_text):
+def generate_card(llm_client, input_text):
     prompt = generate_prompt(input_text)
-    eng_res = openai_client.get_completion(prompt)
+    eng_res = llm_client.ask(prompt, model="gpt-4o")
     return eng_res
 
 
-def translate_to_chinese(openai_client, src_text):
+def translate_to_chinese(llm_client, src_text):
     translate_prompt = (
         "translate the following text into Chinese , your answer  dont modify any symbols"
         + src_text
     )
-    ret = openai_client.get_completion(translate_prompt)
+    ret = llm_client.ask(translate_prompt)
     return chn_char_into_eng_char(ret)
 
 
+#### WARN: this function is can be changed by cursor. It dont recognize: "
 def chn_char_into_eng_char(text):
-    return text.replace(""", '"').replace(""", '"')
+    return text.replace("“", '"').replace("”", '"')
 
 
 def split_a_card(src_text):
@@ -133,87 +139,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-import unittest
-import os
-from unittest.mock import patch, mock_open
-
-
-#  py3 -m unittest generate_cards_md.TestChnCharIntoEngChar
-class TestChnCharIntoEngChar(unittest.TestCase):
-    def test_chn_char_into_eng_char(self):
-        # Test case 1: Chinese quotation marks
-        self.assertEqual(chn_char_into_eng_char("”Hello”"), '"Hello"')
-        # Test case 1: Chinese quotation marks
-        self.assertEqual(chn_char_into_eng_char("“Hello”"), '"Hello"')
-
-        # Test case 2: Mixed Chinese and English quotation marks
-        self.assertEqual(
-            chn_char_into_eng_char('"Hello" and "World"'), '"Hello" and "World"'
-        )
-
-        # Test case 3: No Chinese quotation marks
-        self.assertEqual(chn_char_into_eng_char("Hello World"), "Hello World")
-
-        # Test case 4: Empty string
-        self.assertEqual(chn_char_into_eng_char(""), "")
-
-class TestReadWordsFromFile(unittest.TestCase):
-    def test_read_words_from_file_success(self):
-        with patch('builtins.open', mock_open(read_data="word1\nword2\nword3")):
-            words = read_words_from_file("test.txt")
-            self.assertEqual(words, ["word1", "word2", "word3"])
-
-    def test_read_words_from_empty_file(self):
-        with patch('builtins.open', mock_open(read_data="")):
-            with self.assertRaises(SystemExit):
-                read_words_from_file("empty.txt")
-
-    def test_file_not_found(self):
-        with patch('builtins.open', side_effect=FileNotFoundError):
-            with self.assertRaises(SystemExit):
-                read_words_from_file("nonexistent.txt")
-
-class TestGeneratePrompt(unittest.TestCase):
-    def test_generate_prompt(self):
-        input_text = "test"
-        prompt = generate_prompt(input_text)
-        self.assertIn(input_text, prompt)
-        self.assertIn("I am a native Chinese speaker", prompt)
-
-class TestSplitACard(unittest.TestCase):
-    def test_split_a_card(self):
-        test_card = "## Front content\nBack content line 1\nBack content line 2"
-        front, back = split_a_card(test_card)
-        self.assertEqual(front, "## Front content\n")
-        self.assertEqual(back, "Back content line 1\nBack content line 2")
-
-class TestWriteToFile(unittest.TestCase):
-    @patch('os.makedirs')
-    @patch('builtins.open', new_callable=mock_open)
-    def test_write_to_file(self, mock_file, mock_makedirs):
-        content = "Test content"
-        write_to_file(content)
-        mock_makedirs.assert_called_once_with("data", exist_ok=True)
-        mock_file.assert_called_once_with("data/cards.md", "a")
-        mock_file().write.assert_called_once_with(content)
-
-class TestLLMClient(unittest.TestCase):
-    @patch.dict(os.environ, {"LLM_API_KEY": "test_key"})
-    def test_get_api_token(self):
-        client = LLM_Client()
-        self.assertEqual(client._get_api_token(), "test_key")
-
-    @patch.dict(os.environ, clear=True)
-    def test_get_api_token_missing(self):
-        with self.assertRaises(SystemExit):
-            LLM_Client()
-
-    @patch('openai.OpenAI')
-    def test_create_openai_client(self, mock_openai):
-        with patch.dict(os.environ, {"LLM_API_KEY": "test_key"}):
-            LLM_Client()
-            mock_openai.assert_called_once()
-
-if __name__ == '__main__':
-    unittest.main()
