@@ -142,10 +142,10 @@ def read_words_from_file():
 
 def main():
     import concurrent.futures
+    import multiprocessing
 
-    words = read_words_from_file()
-    # Select words from index 8 to 11 (inclusive)
-    selected_words = words[81:91]
+    words = read_words_from_file()  # about 4000 words.
+    selected_words = words[1181:1291]
     words = selected_words
     llm_client = LLM_Client()
 
@@ -155,7 +155,9 @@ def main():
         card_chn = front + translate_to_chinese(llm_client, back_eng)
         write_to_card_file(card_chn)
 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    max_workers = multiprocessing.cpu_count()
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         executor.map(process_word, words)
 
 
