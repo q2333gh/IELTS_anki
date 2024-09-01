@@ -105,7 +105,7 @@ def translate_to_chinese(openai_client, src_text):
 
 
 def chn_char_into_eng_char(text):
-    return text.replace("“", '"').replace("”", '"')
+    return text.replace(""", '"').replace(""", '"')
 
 
 def split_a_card(src_text):
@@ -135,6 +135,8 @@ if __name__ == "__main__":
     main()
 
 import unittest
+import os
+from unittest.mock import patch, mock_open
 
 
 #  py3 -m unittest generate_cards_md.TestChnCharIntoEngChar
@@ -142,6 +144,8 @@ class TestChnCharIntoEngChar(unittest.TestCase):
     def test_chn_char_into_eng_char(self):
         # Test case 1: Chinese quotation marks
         self.assertEqual(chn_char_into_eng_char("”Hello”"), '"Hello"')
+        # Test case 1: Chinese quotation marks
+        self.assertEqual(chn_char_into_eng_char("“Hello”"), '"Hello"')
 
         # Test case 2: Mixed Chinese and English quotation marks
         self.assertEqual(
@@ -153,3 +157,63 @@ class TestChnCharIntoEngChar(unittest.TestCase):
 
         # Test case 4: Empty string
         self.assertEqual(chn_char_into_eng_char(""), "")
+
+class TestReadWordsFromFile(unittest.TestCase):
+    def test_read_words_from_file_success(self):
+        with patch('builtins.open', mock_open(read_data="word1\nword2\nword3")):
+            words = read_words_from_file("test.txt")
+            self.assertEqual(words, ["word1", "word2", "word3"])
+
+    def test_read_words_from_empty_file(self):
+        with patch('builtins.open', mock_open(read_data="")):
+            with self.assertRaises(SystemExit):
+                read_words_from_file("empty.txt")
+
+    def test_file_not_found(self):
+        with patch('builtins.open', side_effect=FileNotFoundError):
+            with self.assertRaises(SystemExit):
+                read_words_from_file("nonexistent.txt")
+
+class TestGeneratePrompt(unittest.TestCase):
+    def test_generate_prompt(self):
+        input_text = "test"
+        prompt = generate_prompt(input_text)
+        self.assertIn(input_text, prompt)
+        self.assertIn("I am a native Chinese speaker", prompt)
+
+class TestSplitACard(unittest.TestCase):
+    def test_split_a_card(self):
+        test_card = "## Front content\nBack content line 1\nBack content line 2"
+        front, back = split_a_card(test_card)
+        self.assertEqual(front, "## Front content\n")
+        self.assertEqual(back, "Back content line 1\nBack content line 2")
+
+class TestWriteToFile(unittest.TestCase):
+    @patch('os.makedirs')
+    @patch('builtins.open', new_callable=mock_open)
+    def test_write_to_file(self, mock_file, mock_makedirs):
+        content = "Test content"
+        write_to_file(content)
+        mock_makedirs.assert_called_once_with("data", exist_ok=True)
+        mock_file.assert_called_once_with("data/cards.md", "a")
+        mock_file().write.assert_called_once_with(content)
+
+class TestLLMClient(unittest.TestCase):
+    @patch.dict(os.environ, {"LLM_API_KEY": "test_key"})
+    def test_get_api_token(self):
+        client = LLM_Client()
+        self.assertEqual(client._get_api_token(), "test_key")
+
+    @patch.dict(os.environ, clear=True)
+    def test_get_api_token_missing(self):
+        with self.assertRaises(SystemExit):
+            LLM_Client()
+
+    @patch('openai.OpenAI')
+    def test_create_openai_client(self, mock_openai):
+        with patch.dict(os.environ, {"LLM_API_KEY": "test_key"}):
+            LLM_Client()
+            mock_openai.assert_called_once()
+
+if __name__ == '__main__':
+    unittest.main()
