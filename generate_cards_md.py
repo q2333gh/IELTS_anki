@@ -136,6 +136,7 @@ if __name__ == "__main__":
 
 import unittest
 
+
 #  py3 -m unittest generate_cards_md.TestChnCharIntoEngChar
 class TestChnCharIntoEngChar(unittest.TestCase):
     def test_chn_char_into_eng_char(self):
