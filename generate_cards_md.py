@@ -3,22 +3,41 @@ import httpx
 import os
 import sys
 
-def get_api_token():
-    api_token = os.environ.get("LLM_API_KEY")
-    if api_token is None:
-        print("Error: shell env key not found: LLM_API_KEY is not set.", file=sys.stderr)
-        sys.exit(1)  # Exit the program with a non-zero status
-    return api_token
+class OpenAIClient:
+    def __init__(self):
+        self.client = self._create_openai_client()
 
-def create_openai_client(api_token):
-    return OpenAI(
-        base_url="https://api.xty.app/v1",
-        api_key=api_token,
-        http_client=httpx.Client(
+    def _get_api_token(self):
+        api_token = os.environ.get("LLM_API_KEY")
+        if api_token is None:
+            print("Error: shell env key not found: LLM_API_KEY is not set.", file=sys.stderr)
+            sys.exit(1)  # Exit the program with a non-zero status
+        return api_token
+
+    def _create_openai_client(self):
+        api_token = self._get_api_token()
+        return OpenAI(
             base_url="https://api.xty.app/v1",
-            follow_redirects=True,
-        ),
-    )
+            api_key=api_token,
+            http_client=httpx.Client(
+                base_url="https://api.xty.app/v1",
+                follow_redirects=True,
+            ),
+        )
+
+    def get_completion(self, prompt):
+        try:
+            completion = self.client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                # model="gpt-4o",
+                messages=[
+                    {"role": "user", "content": prompt},
+                ],
+            )
+            return completion.choices[0].message.content + "\n\n"
+        except Exception as e:
+            print(f"Error generating completion: {e}", file=sys.stderr)
+            sys.exit(1)
 
 def read_words_from_file(filename):
     try:
@@ -74,20 +93,6 @@ The requirements are as follows:
 """
 '''
 
-def get_completion(client, prompt):
-    try:
-        completion = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            # model="gpt-4o",
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-        )
-        return completion.choices[0].message.content+"\n\n"
-    except Exception as e:
-        print(f"Error generating completion: {e}", file=sys.stderr)
-        sys.exit(1)
-
 def write_to_file(content):
     os.makedirs('data', exist_ok=True)
     try:
@@ -103,22 +108,30 @@ def write_to_file(content):
         print(f"Unexpected error writing to file: {e}", file=sys.stderr)
         sys.exit(1)
 
+def generate_card(openai_client, input_text):
+    prompt = generate_prompt(input_text)
+    eng_res = openai_client.get_completion(prompt)
+    return eng_res
+
+def translate_to_chinese(openai_client, text):
+    translate_prompt = (
+        "translate the following text into Chinese: all symbols should using English characters"
+        + text
+    )
+    return openai_client.get_completion(translate_prompt)
+
 def main():
     input_text = "chronic"
 
-    api_token = get_api_token()
-    client = create_openai_client(api_token)
+    openai_client = OpenAIClient()
 
-    generate_a_card = generate_prompt(input_text)
-    # print(prompt)
+    card_eng = generate_card(openai_client, input_text)
+    print(card_eng)
 
-    eng_res = get_completion(client, generate_a_card)
-    print(eng_res)
-    translate_prompt = "translate the following text into Chinese: all symbols should using English characters" + eng_res
-    chn_res = get_completion(client, translate_prompt)
-    print(chn_res)
-    
-    write_to_file(chn_res)
+    card_chn = translate_to_chinese(openai_client, card_eng)
+    print(card_chn)
+
+    write_to_file(card_chn)
 
 if __name__ == "__main__":
     main()
