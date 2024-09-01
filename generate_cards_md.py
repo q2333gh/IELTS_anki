@@ -139,30 +139,6 @@ def read_words_from_file():
         print(f"Error reading file: {e}", file=sys.stderr)
         exit(1)
 
-
-def main():
-    import concurrent.futures
-    import multiprocessing
-
-    words = read_words_from_file()  # about 4000 words.
-    selected_words = words[2000:2003]
-    words = selected_words
-    llm_client = LLM_Client()
-
-    def process_word(word):
-        card_eng = generate_card(llm_client, word)
-        front, back_eng = split_a_card(card_eng)
-        card_chn = front + translate_to_chinese(llm_client, back_eng)
-        write_to_card_file(card_chn + "\n")
-
-    max_workers = multiprocessing.cpu_count()
-
-    with concurrent.futures.ThreadPoolExecutor(
-        max_workers=max_workers
-    ) as executor:
-        executor.map(process_word, words)
-
-
 import requests
 
 
@@ -195,6 +171,29 @@ def google_translate(text, target_language="zh-CN"):
         print(f"Error occurred while translating: {e}")
         exit(1)
         return text  # Return original text if translation fails
+
+
+def main():
+    import concurrent.futures
+    import multiprocessing
+
+    words = read_words_from_file()  # about 4000 words.
+    selected_words = words[2000:2003]
+    words = selected_words
+    llm_client = LLM_Client()
+
+    def process_word(word):
+        card_eng = generate_card(llm_client, word)
+        front, back_eng = split_a_card(card_eng)
+        card_chn = front + translate_to_chinese(llm_client, back_eng)
+        write_to_card_file(card_chn + "\n")
+
+    max_workers = multiprocessing.cpu_count()
+
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=max_workers
+    ) as executor:
+        executor.map(process_word, words)
 
 
 if __name__ == "__main__":
