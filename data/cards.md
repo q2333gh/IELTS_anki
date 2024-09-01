@@ -45,3 +45,55 @@
 "Chronic" 的词根是 "chron"，源自希腊语 "khronos"，意为时间。后缀 "-ic" 表示...的性质。  
 定义: 慢性的，长期的。
 
+## His **chronic** illness requires ongoing treatment.
+
+**chronic** 这个词源自希腊语“chronos”，意为“时间”。它由前缀“chro-”和后缀“-ic”组成，表示“时间上的”，常用来形容长期存在的疾病或问题。 
+
+定义：长期存在的，持续不断的。
+
+## She suffers from a **chronic** illness that requires ongoing treatment.
+
+The word "chronic" comes from the Greek "chronos," meaning "time." It combines this root with the suffix "-ic," which is used to form adjectives. In English, "chronic" describes something that persists over a long period or is constantly recurring.
+
+Definition: Long-lasting and persistent, often referring to diseases or conditions.
+
+中文翻译：她患有一种需要持续治疗的**慢性**疾病。
+
+“Chronic”一词来源于希腊语“chronos”，意思是“时间”。它与后缀“-ic”结合，后缀“-ic”用于形成形容词。在英语中，“chronic”形容某事物持续很长时间或不断重复，通常指疾病或状况。
+
+定义：长期存在的，持续的，通常指疾病或状况。
+
+## He suffers from **chronic** back pain.
+
+The word "chronic" comes from the Greek word "khronikos," which is derived from "khronos," meaning time. It often includes the suffix "-ic," indicating something characterized by or related to.
+
+Chronic means persisting for a long time or constantly recurring.
+
+他患有**慢性**背痛。
+
+“慢性”一词来源于希腊词“khronikos”，其源自“khronos”，意思是时间。这个词常包含后缀“-ic”，表示与……相关或特点。
+
+慢性意味着持续很长时间或不断复发。
+
+## She has a **chronic** cough that never seems to go away.
+
+The word "chronic" comes from the Greek word "chronikos," which means "of time" or "pertaining to time," from "chronos," meaning "time." The root "chron-" relates to time, and the suffix "-ic" is used to form adjectives. It implies something that persists over a long period.
+
+**Chronic** means lasting a long time or recurring frequently, especially in relation to health conditions.
+
+## The patient suffers from **chronic** pain that persists for months.  
+The word "chronic" comes from the Greek word "chronos," meaning "time." The prefix "chron-" relates to time, while the suffix "-ic" indicates an adjective. "Chronic" refers to something that is long-lasting or recurrent.  
+**Chronic**: persisting for a long time or constantly recurring.
+
+## **Chronic** stress can lead to serious health issues.
+
+The word **chronic** comes from the Greek word "chronikos," which means "of time." It combines "chronos" (time) with the suffix "-ic," indicating something related to time or duration. **Chronic** refers to something that persists over a long period or is constantly recurring.
+
+Definition: **Chronic** means persisting for a long time or constantly recurring, especially in relation to illness or conditions.
+
+## 他有一个**慢性**的咳嗽，总是无法痊愈。
+
+“**慢性**”这个词源自希腊语中的“chronos”，意思是“时间”。它由“chronos”和后缀“-ic”组合而成，后缀“-ic”表示“有关的”。最初它指的是持续时间长或经常重复的事物。
+
+定义：“**慢性**”用来描述一种长期存在且持续不断的状况或情况，通常难以消除或控制。
+

@@ -39,15 +39,15 @@ def read_words_from_file(filename):
         sys.exit(1)
 
 def generate_prompt(input_text):
+# The answer should be derived from the English corpus to solve the problem and translated into Chinese:
     return f"""
-The answer should be derived from the English corpus to solve the problem and translated into Chinese:
-I am a native Chinese speaker and need to learn English words: {input_text}
+I am a native Chinese speaker and need to learn English a word: {input_text}
 The requirements are as follows:
 1. Please answer in plain text format, do not use Markdown.
 2. The answer should only include the following content:
   01. Start with 2 #, followed by a space, and use appropriate wording to make a sentence. The sentence should be short and accurately use the most common usage of the word to be learned, with the word wrapped in ** **, then start a new line.
-  02. Briefly and comprehensively explain the root and affixes, and the origin of the word in Chinese.
-  03. Brief and accurate definition.
+  02. Briefly and comprehensively explain the root and affixes, and the origin of the word in English.
+  03. Brief and accurate definition.  
 """
 
 '''
@@ -77,8 +77,8 @@ The requirements are as follows:
 def get_completion(client, prompt):
     try:
         completion = client.chat.completions.create(
-            # model="gpt-3.5-turbo",
-            model="gpt-4o",
+            model="gpt-3.5-turbo",
+            # model="gpt-4o",
             messages=[
                 {"role": "user", "content": prompt},
             ],
@@ -104,17 +104,21 @@ def write_to_file(content):
         sys.exit(1)
 
 def main():
-    api_token = get_api_token()
-    client = create_openai_client(api_token)
-    
     input_text = "chronic"
 
-    prompt = generate_prompt(input_text)
-    print(prompt)
+    api_token = get_api_token()
+    client = create_openai_client(api_token)
 
-    res = get_completion(client, prompt)
-    print(res)
-    write_to_file(res)
+    generate_a_card = generate_prompt(input_text)
+    # print(prompt)
+
+    eng_res = get_completion(client, generate_a_card)
+    print(eng_res)
+    translate_prompt = "translate the following text into Chinese: all symbols should using English characters" + eng_res
+    chn_res = get_completion(client, translate_prompt)
+    print(chn_res)
+    
+    write_to_file(chn_res)
 
 if __name__ == "__main__":
     main()
